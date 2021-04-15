@@ -21,7 +21,7 @@ export default function Login(){
     navigation.navigate('Register');
   }
   function handleNavigateToPerfilDetails(){
-    navigation.navigate('Profile');
+    navigation.navigate('Home');
   }
     return(
       <SafeAreaView style={styles.container}>
