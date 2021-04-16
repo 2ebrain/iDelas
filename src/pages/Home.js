@@ -8,6 +8,10 @@ import { StyleSheet,
         Image } from 'react-native'
 
 import AvatarHome from '../assets/icon-avatar-home.png'
+import Capa from '../assets/capa.png'
+import AvatarProfile from '../assets/avatar-profile.png'
+import CardMap from '../assets/map-image.png'
+import GirlStudy from '../assets/university-girl.png'
 
 import { FontAwesome5 } from '@expo/vector-icons'
 
@@ -16,6 +20,7 @@ export default function Home(){
   return(
     <SafeAreaView style={styles.container}>
       <StatusBar/>
+
       <ScrollView >
         <View style={styles.content}>
           {/** Seção do Header*/}
@@ -29,6 +34,7 @@ export default function Home(){
               <FontAwesome5 name="bell" size={25}/>
             </View>
           </View>
+
           {/* Seção de perfil */}
           <View style={styles.perfilContainer}>
             <Image source={AvatarHome}
@@ -46,6 +52,7 @@ export default function Home(){
               </View>
             </View>
           </View>
+
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
@@ -109,8 +116,8 @@ export default function Home(){
             </View>
 
           </View>
-          {/* Seção botoes elims */}
 
+          {/* Seção botoes elims */}
           <View style={styles.cardOptions}>
             <FontAwesome5 name='scroll' size={23} color='#fff'/>
             <Text style={styles.textRelatorios}>Relatórios</Text>
@@ -119,11 +126,26 @@ export default function Home(){
             <FontAwesome5 name='border-none' size={23} color='#fff'/>
             <Text style={styles.textRelatorios}>Categorias</Text>
           </View>
-          
 
-         
+          {/* Seção Mais Opções */}
+          <View style={styles.profileContainer}>
+            <Image source={Capa}/>
+            <View style={styles.profileContent}>
+              <Image source={AvatarProfile} style={styles.avatarProfile}/>
+              <Text style={styles.profileText}>Atatica Studios</Text>
+            </View>
+          </View>
+          {/* Container Box */}
+          <View style={styles.cardsContainer}>
+            <View style={styles.cardMap}>
+              <Image source={CardMap} style={styles.cardImg}/>
+            </View>
 
-          
+            <View style={styles.cardGirl}>
+              <Image source={GirlStudy} style={styles.cardImg}/>
+              <Text style={styles.textCard}>Universidade{'\n'}Da Quel</Text>
+            </View>
+          </View>
 
         </View>
 
@@ -319,6 +341,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     width:325,
     height:51,
+    elevation:5,
     backgroundColor:'#691CC7',
     borderTopLeftRadius:15,
     borderBottomLeftRadius:15,
@@ -332,5 +355,72 @@ const styles = StyleSheet.create({
     color:'#fff',
     marginLeft:10,
   },
+  // Mais opções
+  profileContainer:{
+    width:321,
+    height:160,
+    backgroundColor:'#fff',
+    borderRadius:25,
+    marginBottom:30,
+    elevation:8,
+  },
+  profileContent:{
+    flexDirection:'row',
+    position:'absolute',
+    top:90,
+    left:15,
+   
+    alignItems:'center',
+    justifyContent:'space-between',
+    width:160,
+  },
+  avatarProfile:{
+    backgroundColor:'#000',
+    width:50,
+    height:50,
+    borderRadius:25,
+  },
+  profileText:{
+    color:'#691CC7',
+    fontSize:13,
+    marginTop:25,
+  },
+  // Cards
+  cardsContainer:{
+    width:325,
+    height:'auto',
+    marginBottom:15,
+    justifyContent:'space-between',
+    flexDirection:'row',
+    
+  },
+  cardMap:{
+    elevation:8,
+    borderRadius:20,
+    width:151,
+    height:90,
+  },
+  cardGirl:{
+    elevation:8,
+    borderRadius:20,
+    width:151,
+    height:90,
+  },
+  cardImg:{
+    width:153,
+    height:93,
+    flexDirection:'row',
+    alignItems:'center',
+    backgroundColor:'#75A2C6',
+    borderRadius:20,
+    },
+    textCard:{
+      color:'#fff',
+      fontSize:12,
+      position:'absolute',
+      top:40,
+      left:65,
+      textAlign:'left',
+    },
 
 });
