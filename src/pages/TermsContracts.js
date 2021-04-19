@@ -12,8 +12,8 @@ export default function TermsContracts(){
 
   const navigation = useNavigation();
 
-  function handleNavigateToPerfilDetails(){
-    navigation.navigate('Profile');
+  function handleNavigateToDetalheslDetails(){
+    navigation.navigate('Detalhes');
   }
     
     return(
@@ -50,7 +50,7 @@ export default function TermsContracts(){
                             color='#31d57c'
                             width={199}
                             marginTop={14}
-                            onPress={handleNavigateToPerfilDetails}
+                            onPress={handleNavigateToDetalheslDetails}
                         />
                 </View>
               </View>
