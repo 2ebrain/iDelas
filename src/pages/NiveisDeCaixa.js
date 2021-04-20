@@ -57,16 +57,53 @@ export default function Home(){
             </View>
           </View>
 
-          <View>
-            <Text>Níveis de caixa</Text>
-
-            <View>
-              <Text>Metas </Text>
+          {/*section moutant*/}
+          <View style={styles.accountContainer}>
+            <View style={styles.boxText}>
+              <Text style={styles.tituloH1}>Níveis de caixa</Text>
             </View>
+
+            <View style={styles.boxMeta}>
+
+              <View style={styles.metaContainerText}>
+                <Text style={styles.textMeta}>Metas </Text>            
+              </View>
+
+              <View style={styles.containerMountant}>
+
+                <View style={styles.rowMountant}>
+                  <View style={styles.itemMountant}>
+                    <Text style={styles.textMountant}>R$ 103.202,00</Text>
+                  </View>
+                  <View>
+                    <Text>R$ 103.202,00</Text>
+                  </View>
+                  <View>
+                    <Text>R$ 103.202,00</Text>
+                  </View>
+                </View>
+                <View style={styles.rowMountant}>
+                  <View style={styles.itemMountant}>
+                    <Text style={styles.textMountant}>R$ 103.202,00</Text>
+                  </View>
+                  <View>
+                    <Text>R$ 103.202,00</Text>
+                  </View>
+                  <View>
+                    <Text>R$ 103.202,00</Text>
+                  </View>
+                </View>
+
+              </View>
+
+
+
+
+            </View>
+
+
           </View>
-        
-          
-        
+
 
         </View>
 
@@ -206,6 +243,67 @@ const styles = StyleSheet.create({
     backgroundColor:'#40CC4B',
     borderRadius:10,
     color:'#fff',
+  },
+
+  //Moutant
+  accountContainer:{
+    flex:1,
+    alignItems:'center',
+    justifyContent:'center',
+    backgroundColor:'pink',
+    width:'100%',
+  },
+  boxText:{
+    width:'100%',
+    paddingHorizontal:24,
+    marginBottom:20,
+    
+  },
+  tituloH1:{
+    fontSize:15,
+    color:'#691CC7',
+  },
+  boxMeta:{
+    width:'90%',
+    backgroundColor:'#fff',
+    borderRadius:10,
+    marginBottom:20,
+  },
+  metaContainerText:{
+    backgroundColor:'#691CC7',
+    width:'10%',
+    alignItems:'center',
+    justifyContent:'center',
+    height:18,
+    borderRadius:5,
+    margin:15,
+  },
+  textMeta:{
+    fontSize:9,
+    color:'#fff',
+  },
+  containerMountant:{
+    width:'80%',
+    margin:10,
+
+  },
+  rowMountant:{
+    flex:1,
+    flexDirection:'row',
+    width:'100%',
+  },
+  itemMountant:{
+    borderWidth:2,
+    width:75,
+    height:'auto',
+    height:50,
+    justifyContent:'flex-end',
+    alignItems:'center',
+  },
+  textMountant:{
+    fontSize:8,
+    
+    justifyContent:'flex-end',
   },
   
 
