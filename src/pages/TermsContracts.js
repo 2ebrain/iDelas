@@ -13,7 +13,7 @@ export default function TermsContracts(){
   const navigation = useNavigation();
 
   function handleNavigateToDetalheslDetails(){
-    navigation.navigate('Detalhes');
+    navigation.navigate('Home');
   }
     
     return(

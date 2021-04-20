@@ -5,7 +5,10 @@ import { StyleSheet,
          ScrollView, 
          View, 
          StatusBar,
-        Image } from 'react-native'
+        Image,
+      TouchableOpacity } from 'react-native'
+
+import { useNavigation } from '@react-navigation/core'
 
 import AvatarHome from '../assets/icon-avatar-home.png'
 import Capa from '../assets/capa.png'
@@ -17,6 +20,8 @@ import { FontAwesome5 } from '@expo/vector-icons'
 
 
 export default function Home(){
+  const navigation = useNavigation();
+  
   return(
     <SafeAreaView style={styles.container}>
       <StatusBar/>
@@ -76,8 +81,12 @@ export default function Home(){
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
-                <FontAwesome5 name='eye' size={15}/>
-                <FontAwesome5 name='chevron-down' size={15}/>
+                <TouchableOpacity>
+                  <FontAwesome5 name='eye' size={15}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('NiveisDeCaixa')}>
+                  <FontAwesome5 name='chevron-down' size={15}/>
+                </TouchableOpacity>
               </View>
             </View>
           </View>
@@ -90,8 +99,12 @@ export default function Home(){
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
-                <FontAwesome5 name='eye' size={15}/>
-                <FontAwesome5 name='chevron-down' size={15}/>
+                <TouchableOpacity>
+                  <FontAwesome5 name='eye' size={15}/>
+                </TouchableOpacity>
+                <TouchableOpacity onPress={() => navigation.navigate('Detalhes')}>
+                  <FontAwesome5 name='chevron-down' size={15}/>
+                </TouchableOpacity>
               </View>
             </View>
           </View>

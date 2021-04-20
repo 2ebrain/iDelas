@@ -7,7 +7,10 @@ import { StyleSheet,
           View} from 'react-native'
 import {FontAwesome5} from '@expo/vector-icons'
 
+import { useNavigation} from '@react-navigation/core'
+
 export default function Detalhes(){
+  const navigation = useNavigation();
   return(
     <SafeAreaView style={styles.container}>
       <ScrollView style={styles.scrollContainer}>
@@ -17,7 +20,7 @@ export default function Detalhes(){
           <View style={styles.closeContainer}>
             <View style={styles.closeBox}>
               <Text style={styles.closeText}>Fechar Detalhes</Text>
-              <TouchableOpacity>
+              <TouchableOpacity onPress={() => navigation.goBack()}>
                 <FontAwesome5 name='times-circle' color='#fff' size={23}/>
               </TouchableOpacity>
             </View>
