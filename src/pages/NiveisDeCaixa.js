@@ -70,34 +70,53 @@ export default function Home(){
               </View>
 
               <View style={styles.containerMountant}>
-
-                <View style={styles.rowMountant}>
-                  <View style={styles.itemMountant}>
-                    <Text style={styles.textMountant}>R$ 103.202,00</Text>
+                {/* Caixa de colunas */}
+                <View style={styles.columContainer}>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
-                  <View>
-                    <Text>R$ 103.202,00</Text>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
-                  <View>
-                    <Text>R$ 103.202,00</Text>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
-                </View>
-                <View style={styles.rowMountant}>
-                  <View style={styles.itemMountant}>
-                    <Text style={styles.textMountant}>R$ 103.202,00</Text>
-                  </View>
-                  <View>
-                    <Text>R$ 103.202,00</Text>
-                  </View>
-                  <View>
-                    <Text>R$ 103.202,00</Text>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                 </View>
-
+                {/* Segunda Coluna */}
+                <View style={styles.columContainer}>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                </View>
+                {/* Terceira Coluna */}
+                <View style={styles.columContainer}>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                  <View style={styles.boxItem}>
+                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                  </View>
+                </View>
               </View>
-
-
-
+             
 
             </View>
 
@@ -134,7 +153,7 @@ const styles = StyleSheet.create({
   headerMenu:{
     flexDirection:'row',
     alignItems:'center',
-    justifyContent:'space-between',
+    justifyContent:'space-between', 
     width:65,
   },
   headerContent:{
@@ -250,7 +269,6 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems:'center',
     justifyContent:'center',
-    backgroundColor:'pink',
     width:'100%',
   },
   boxText:{
@@ -274,7 +292,7 @@ const styles = StyleSheet.create({
     width:'10%',
     alignItems:'center',
     justifyContent:'center',
-    height:18,
+    height:20,
     borderRadius:5,
     margin:15,
   },
@@ -283,28 +301,34 @@ const styles = StyleSheet.create({
     color:'#fff',
   },
   containerMountant:{
-    width:'80%',
-    margin:10,
-
-  },
-  rowMountant:{
-    flex:1,
+    width:'85%',
+    paddingHorizontal:20,
     flexDirection:'row',
-    width:'100%',
   },
-  itemMountant:{
-    borderWidth:2,
-    width:75,
+  columContainer:{
+    borderWidth:5,
+    
+    borderColor:'#691CC7',
+    borderBottomEndRadius:20,
+    borderBottomLeftRadius:20,
+    width:'40%',
     height:'auto',
-    height:50,
+    marginBottom:25,
+  },
+  boxItem:{
+    borderBottomWidth:2, 
+    borderStyle:'dotted',
+    borderRadius:5 ,
+    width:'100%',
+    height:85,
     justifyContent:'flex-end',
     alignItems:'center',
-  },
-  textMountant:{
-    fontSize:8,
+     
     
-    justifyContent:'flex-end',
   },
-  
+  itemText:{
+    fontSize:11,
+    
+  },
 
 });
