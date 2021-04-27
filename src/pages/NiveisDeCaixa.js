@@ -14,45 +14,55 @@ import { useNavigation } from '@react-navigation/core'
 
 import { FontAwesome5 } from '@expo/vector-icons'
 
-
 export default function Home(){
   const navigate = useNavigation();
-  return(
+  return (
     <SafeAreaView style={styles.container}>
-      <StatusBar/>
+      <StatusBar />
 
-      <ScrollView >
+      <ScrollView>
         <View style={styles.content}>
           {/** Seção do Header*/}
           <View style={styles.header}>
-
             <View style={styles.headerMenu}>
               <TouchableOpacity onPress={() => navigate.goBack()}>
-                <FontAwesome5 name="chevron-left" size={25}/>
+                <FontAwesome5 name="chevron-left" size={25} />
               </TouchableOpacity>
               <Text>Voltar</Text>
             </View>
 
             <View style={styles.headerContent}>
-              <TouchableOpacity><FontAwesome5 name="question" size={25}/></TouchableOpacity>
-              <TouchableOpacity><FontAwesome5 name="bell" size={25}/></TouchableOpacity>
+              <TouchableOpacity>
+                <FontAwesome5 name="question" size={25} />
+              </TouchableOpacity>
+              <TouchableOpacity>
+                <FontAwesome5 name="bell" size={25} />
+              </TouchableOpacity>
             </View>
           </View>
 
           {/* Seção de perfil */}
           <View style={styles.perfilContainer}>
-            <Image source={AvatarHome}
-                  style={styles.avatarHome}/>
+            <Image source={AvatarHome} style={styles.avatarHome} />
             <View style={styles.infoContainer}>
               <Text style={styles.nameAvatar}>Renata Mendes</Text>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorder}><View style={styles.barraProgress}></View></View><Text style={styles.progressText}>NIVEL 1</Text>
+                <View style={styles.barraBorder}>
+                  <View style={styles.barraProgress}></View>
+                </View>
+                <Text style={styles.progressText}>NIVEL 1</Text>
               </View>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorderBlack}><View style={styles.barraProgressBlack}></View></View><Text style={styles.progressTextBlack}>50 PTS</Text>
+                <View style={styles.barraBorderBlack}>
+                  <View style={styles.barraProgressBlack}></View>
+                </View>
+                <Text style={styles.progressTextBlack}>50 PTS</Text>
               </View>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorderGreen}><View style={styles.barraProgressGreen}></View></View><Text style={styles.progressTextGreen}>RF</Text>
+                <View style={styles.barraBorderGreen}>
+                  <View style={styles.barraProgressGreen}></View>
+                </View>
+                <Text style={styles.progressTextGreen}>RF</Text>
               </View>
             </View>
           </View>
@@ -64,69 +74,72 @@ export default function Home(){
             </View>
 
             <View style={styles.boxMeta}>
-
               <View style={styles.metaContainerText}>
-                <Text style={styles.textMeta}>Metas </Text>            
+                <Text style={styles.textMeta}>Metas</Text>
               </View>
 
               <View style={styles.containerMountant}>
                 {/* Caixa de colunas */}
                 <View style={styles.columContainer}>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+
+                  <View style={styles.columnBox}>
+                    <View style={styles.boxItem}>
+                      <Text style={[styles.itemText, styles.colorWhite]}>
+                        R$ 103.202.00
+                      </Text>
+                    </View>
+                    <View style={styles.boxItem}>
+                      <Text style={[styles.itemText, styles.colorWhite]}>
+                        R$ 103.202.00
+                      </Text>
+                    </View>
+                    <View style={styles.boxItem}>
+                      <Text style={[styles.itemText, styles.colorWhite]}></Text>
+                    </View>
                   </View>
                 </View>
-                {/* Segunda Coluna */}
-                <View style={styles.columContainer}>
+                {/* Segunda Caixa de colunas */}
+                <View style={styles.columContainerSecundary}>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                   <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                    <Text style={styles.itemText}>R$ 103.202.00</Text>
                   </View>
                 </View>
-                {/* Terceira Coluna */}
-                <View style={styles.columContainer}>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+                {/* Terceira Caixa de colunas */}
+                <View style={styles.columContainerTri}>
+                  <View style={styles.boxTableShiel}>
+                    <Text style={styles.inputText}>Dividendos</Text>
+                    <Text style={styles.inputText}>Investidores</Text>
                   </View>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                      <Text style={styles.itemText}>R$ 103.202.00</Text>
+
+                  <Text style={styles.inputText}>Reserva Financeira</Text>
+              
+                  <View style={styles.boxTableShiel}>
+                    <Text style={styles.inputText}>Obrigações Trabalhistas</Text>
+                    <Text style={styles.inputText}>Corrente</Text>
                   </View>
                 </View>
+
               </View>
-             
+
 
             </View>
-
-
           </View>
-
-
         </View>
-
-
       </ScrollView>
     </SafeAreaView>
   );
@@ -141,6 +154,7 @@ const styles = StyleSheet.create({
   },
   content:{
     alignItems:'center',
+    width:'100%',
   },
   header:{
     width:'100%',
@@ -148,7 +162,6 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'space-between',
     padding:25,
-
   },
   headerMenu:{
     flexDirection:'row',
@@ -161,7 +174,6 @@ const styles = StyleSheet.create({
     width:55,
     alignItems:'center',
     justifyContent:'space-between',
-
   },
   realidBox:{
     width:100,
@@ -193,7 +205,6 @@ const styles = StyleSheet.create({
     width:230,
     justifyContent:'flex-start',
     alignItems:'flex-start',
- 
   },
   nameAvatar:{
     fontSize:15,
@@ -283,48 +294,88 @@ const styles = StyleSheet.create({
   },
   boxMeta:{
     width:'90%',
+    height:'auto',
     backgroundColor:'#fff',
     borderRadius:10,
     marginBottom:20,
+    justifyContent:'center',
+    alignItems:'center',
   },
   metaContainerText:{
-    backgroundColor:'#691CC7',
-    width:'10%',
-    alignItems:'center',
+    width:'95%',
+    alignItems:'flex-start',
     justifyContent:'center',
     height:20,
-    borderRadius:5,
     margin:15,
+    
+    
   },
   textMeta:{
-    fontSize:9,
+    width:'13%',
+    padding:5,
+    fontSize:10,
     color:'#fff',
+    borderRadius:5,
+    backgroundColor:'#691CC7',
+    
   },
+
+  //Seção de tabelas(Colunas) 
   containerMountant:{
-    width:'85%',
-    paddingHorizontal:20,
+    width:'100%',
+    justifyContent:'space-evenly',
     flexDirection:'row',
   },
+  // Primeira Coluna
   columContainer:{
-    borderWidth:5,
-    
-    borderColor:'#691CC7',
+    borderWidth:2,
     borderBottomEndRadius:20,
     borderBottomLeftRadius:20,
-    width:'40%',
+    borderColor:'#691CC7',
+    width:95,
     height:'auto',
     marginBottom:25,
   },
-  boxItem:{
-    borderBottomWidth:2, 
-    borderStyle:'dotted',
-    borderRadius:5 ,
+  columnBox:{
+    backgroundColor:'#691CC7',
+    borderBottomEndRadius:15,
+    borderBottomLeftRadius:15,
+  },
+  // Segunda Coluna
+  columContainerSecundary:{
+    width:80,
+  },
+  columContainerTri:{
+    width:150,
+    height:350,
+    justifyContent:'space-between',
+  },
+  boxTableShiel:{ 
+    height:90,
+    justifyContent:'space-between',
+  },
+  boxTableShielPrimary:{
+    height:30,
+  },
+  inputText:{
     width:'100%',
+    fontSize:11,
+    backgroundColor:'#691CC7',
+    color:'#fff',
+    padding:3,
+    textAlign:'center',
+    marginBottom:5,
+    borderRadius:10,
+
+  },
+  colorWhite:{
+    color:'#fff',
+  },
+  boxItem:{
+    borderRadius:5,
     height:85,
     justifyContent:'flex-end',
     alignItems:'center',
-     
-    
   },
   itemText:{
     fontSize:11,

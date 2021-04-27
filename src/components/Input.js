@@ -9,6 +9,9 @@ export default props => {
                   placeholderTextColor='#fff'
                     secureTextEntry={props.secureTextEntry}
                     textContentType={props.textContentType}
+                    keyboardType={props.keyboardType}
+                    onChangeText={props.onChangeText}
+                    autoFocus={props.autoFocus}
                   />);
 }
 

@@ -1,5 +1,9 @@
 import React from 'react'
-import  {SafeAreaView, View, StyleSheet, ImageBackground, Image, Text, StatusBar} from 'react-native'
+import  {SafeAreaView, View, 
+                      StyleSheet, 
+                      ImageBackground, 
+                      Image, Text, 
+                      StatusBar} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import BrackgroundSub from '../assets/circuitos_.png'
@@ -15,14 +19,20 @@ import Link from '../components/Link'
 import Botao from '../components/Button'
 
 export default function Login(){
+  state = {
+    email:'',
+    password:'',
+  }
   const navigation = useNavigation();
 
   function handleNavigateToRegisterDetails(){
     navigation.navigate('Register');
   }
-  function handleNavigateToPerfilDetails(){
+  function login(){
     navigation.navigate('Home');
   }
+
+  
     return(
       <SafeAreaView style={styles.container}>
         <StatusBar/>
@@ -35,6 +45,9 @@ export default function Login(){
                           colorBorder='#FFFFFF' 
                           textContentType='emailAddress'
                           width={250}
+                          keyboardType='email-address'
+                          onChangeText={email => setState({email})}
+                          
                     />
                     <InputPassword/>
                 </View>
@@ -46,7 +59,7 @@ export default function Login(){
                       width={120}
                       marginTop={25}
                       marginBottom={12}
-                      onPress={handleNavigateToPerfilDetails}
+                      onPress={login}
                 />
                 <Link tittle='Ou entre com:'
                       size={13}
@@ -57,6 +70,7 @@ export default function Login(){
                   <Image source={GoogleIcon} style={styles.imgIcon}/>
                   <Image source={LinkedinIcon} style={styles.imgIcon}/>
                 </View>
+
                 <View style={styles.boxRegister}>
                   <Text style={styles.registerText}>Nova?{'\n'} Crie sua conta gratuitamente</Text>
                   <Botao tittle='Cadastrar' 

@@ -18,23 +18,28 @@ import GirlStudy from '../assets/university-girl.png'
 
 import { FontAwesome5 } from '@expo/vector-icons'
 
-
 export default function Home(){
   const navigation = useNavigation();
   
   return(
     <SafeAreaView style={styles.container}>
+      
       <StatusBar/>
-
+ 
       <ScrollView >
         <View style={styles.content}>
           {/** Seção do Header*/}
           <View style={styles.header}>
-            <FontAwesome5 name="bars" size={25}/>
+            <TouchableOpacity onPress={() =>{navigation.goBack()}}>
+              <FontAwesome5 name="bars" size={25}/>
+            </TouchableOpacity>
             <View style={styles.headerContent}>
+             
               <View style={styles.realidBox}>
+              
                 <Text style={styles.realidText}>Realizado</Text>
                 <FontAwesome5 name='chevron-down' color='#fff'/>
+                
               </View>
               <FontAwesome5 name="bell" size={25}/>
             </View>

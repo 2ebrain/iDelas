@@ -27,6 +27,7 @@ export default function Register(){
                           colorBorder='#fff' 
                           textContentType='emailAddress'
                           width={250}
+                          autoFocus={true}
                     />
                     <Input placeholder='Digite um e-mail válido' 
                           colorBorder='#fff' 

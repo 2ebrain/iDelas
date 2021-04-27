@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import {StyleSheet, View, TextInput, TouchableOpacity} from 'react-native'
 import { FontAwesome5 } from '@expo/vector-icons'
 
-export default () => {
+export default (props) => {
   const [input, setInput] = useState('');
   const [hidePass, setHidePass] = useState(true);
   return(
@@ -14,8 +14,9 @@ export default () => {
           placeholder="Senha"
           placeholderTextColor='#fff'
           value={input}
-          onChangeText={ (texto) => setInput(texto) }
+          onChangeText={ (password) => setInput(password) }
           secureTextEntry={hidePass}
+          keyboardType={props.keyboardType}
           />
         <TouchableOpacity style={styles.icon}
                           onPress={ 

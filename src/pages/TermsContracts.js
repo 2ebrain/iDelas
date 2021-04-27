@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         flex:1,
     },
     backngroundPrimary:{
-      flex:1,
+      flex:1,    
       backgroundColor:'#F3F0E8',
     },
     brackgroundSub:{
