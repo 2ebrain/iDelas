@@ -7,6 +7,8 @@ import { StyleSheet,
           View} from 'react-native'
 import {FontAwesome5} from '@expo/vector-icons'
 
+
+
 import { useNavigation} from '@react-navigation/core'
 
 export default function Detalhes(){

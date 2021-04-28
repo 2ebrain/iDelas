@@ -9,9 +9,9 @@ import { useNavigation } from '@react-navigation/core'
 import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
-import FaceIcon from '../assets/face_icon_78x78.png'
-import GoogleIcon from '../assets/google_icon_78x78.png'
-import LinkedinIcon from '../assets/linkedin_icon_78x78.png'
+import FaceIcon from '../assets/icons/icon-facebook.png'
+import GoogleIcon from '../assets/icons/icon-google.png'  
+import LinkedinIcon from '../assets/icons/icon-linkedin.png'
 
 import Input from '../components/Input'
 import InputPassword from '../components/PasswordInput'

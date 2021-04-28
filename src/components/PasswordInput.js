@@ -23,11 +23,11 @@ export default (props) => {
                             () => setHidePass(!hidePass) 
                           }>
           { hidePass ?
-           <FontAwesome5 name='eye'
+           <FontAwesome5 name='eye-slash'
                         color='#fff'
                         size={25} />
                         :
-           <FontAwesome5 name='eye-slash'
+           <FontAwesome5 name='eye'
                           color='#fff'
                           size={25} />
         }

@@ -10,9 +10,24 @@ import { StyleSheet,
 
 import { useNavigation } from '@react-navigation/core'
 
+//importes dos icones usados na view
+import butonToggle from '../assets/icons/icon-toggle.png'
+import buttonSing from '../assets/icons/icon-sino.png'
+import iconDollar from '../assets/icons/dollar-coin.png'
+import iconEye from '../assets/icons/icon-eye-gray.png'
+import iconArrowBottom from '../assets/icons/icon-arrow-bottom.png'
+import IconCategoria from '../assets/icons/icon-categorias.png'
+import IconRelatorios from '../assets/icons/icon-relatorios.png'
+import IconSocios from '../assets/icons/icon-socios.png'
+import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
+import IconConciliacaoContas from '../assets/icons/icon-carteira.png'
+import IconSaidas from '../assets/icons/icon-saidas.png'
+import IconCobranca from '../assets/icons/icon-cobrancas.png'
+import IconEntradas from '../assets/icons/icon-entradas.png'
 import AvatarHome from '../assets/icon-avatar-home.png'
-import Capa from '../assets/capa.png'
 import AvatarProfile from '../assets/avatar-profile.png'
+
+import Capa from '../assets/capa.png'
 import CardMap from '../assets/map-image.png'
 import GirlStudy from '../assets/university-girl.png'
 
@@ -31,7 +46,7 @@ export default function Home(){
           {/** Seção do Header*/}
           <View style={styles.header}>
             <TouchableOpacity onPress={() =>{navigation.goBack()}}>
-              <FontAwesome5 name="bars" size={25}/>
+              <Image source={butonToggle} style={{width:20, height:20,}}/>
             </TouchableOpacity>
             <View style={styles.headerContent}>
              
@@ -41,7 +56,7 @@ export default function Home(){
                 <FontAwesome5 name='chevron-down' color='#fff'/>
                 
               </View>
-              <FontAwesome5 name="bell" size={25}/>
+              <Image source={buttonSing} style={{width:20, height:22,}}/>
             </View>
           </View>
 
@@ -68,12 +83,17 @@ export default function Home(){
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <FontAwesome5 name='coins' color='#31D57C' size={21}/>
+                <Image source={iconDollar} style={{width:27, height:21,}}/>
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
-                <FontAwesome5 name='eye' size={15}/>
-                <FontAwesome5 name='chevron-down' size={15}/>
+                <TouchableOpacity>
+                  <Image source={iconEye} style={{width:18, height:13,}}/>
+                </TouchableOpacity>
+                <TouchableOpacity>
+                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
+                </TouchableOpacity>
+                
               </View>
             </View>
           </View>
@@ -82,15 +102,15 @@ export default function Home(){
             <Text style={styles.tittleText}>Níveis de Caixa</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <FontAwesome5 name='coins' color='#31D57C' size={21}/>
-                <Text>R$ 24.643,00</Text>
+                <Image source={iconDollar} style={{width:27, height:21,}}/>
+                <Text>R$ 55.265,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
-                  <FontAwesome5 name='eye' size={15}/>
+                  <Image source={iconEye} style={{width:18, height:13,}}/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('NiveisDeCaixa')}>
-                  <FontAwesome5 name='chevron-down' size={15}/>
+                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
                 </TouchableOpacity>
               </View>
             </View>
@@ -100,36 +120,37 @@ export default function Home(){
             <Text style={styles.tittleText}>Resultado Financeiro</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <FontAwesome5 name='coins' color='#31D57C' size={21}/>
+                <Image source={iconDollar} style={{width:27, height:21,}}/>
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
-                  <FontAwesome5 name='eye' size={15}/>
+                  <Image source={iconEye} style={{width:18, height:13,}}/>
                 </TouchableOpacity>
                 <TouchableOpacity onPress={() => navigation.navigate('Detalhes')}>
-                  <FontAwesome5 name='chevron-down' size={15}/>
+                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
                 </TouchableOpacity>
               </View>
             </View>
           </View>
 
+        
           {/* Seção Botoes */}
           <View style={styles.botoesContainer}>
             <View style={styles.botao}>
-              <FontAwesome5 name='wallet' size={41} color='#691CC7'/>
+              <Image source={IconConciliacaoContas} style={{width:41, height:46,}}/>
               <Text style={styles.textBotao}>Conciliação de Contas</Text>
             </View>
             <View style={styles.botao}>
-              <FontAwesome5 name='money-bill-wave' size={41} color='#691CC7'/>
+            <Image source={IconSaidas} style={{width:53, height:38,}}/>
               <Text style={styles.textBotao}>Saidas</Text>
             </View>
             <View style={styles.botao}>
-              <FontAwesome5 name='hand-holding-usd' size={41} color='#691CC7'/>
+            <Image source={IconCobranca} style={{width:67, height:40,}}/>
               <Text style={styles.textBotao}>Cobranças Pendentes</Text>
             </View>
             <View style={styles.botao}>
-              <FontAwesome5 name='receipt' size={41} color='#691CC7'/>
+            <Image source={IconEntradas} style={{width:60, height:47,}}/>
               <Text style={styles.textBotao}>Entradas</Text>
             </View>
 
@@ -137,12 +158,20 @@ export default function Home(){
 
           {/* Seção botoes elims */}
           <View style={styles.cardOptions}>
-            <FontAwesome5 name='scroll' size={23} color='#fff'/>
+            <Image source={IconBoxDollar} style={{width:30, height:28,}}/>
+            <Text style={styles.textRelatorios}>Precificação de Produtos & Serviços</Text>
+          </View>
+          <View style={styles.cardOptions}>
+            <Image source={IconRelatorios} style={{width:21, height:31,}}/>
             <Text style={styles.textRelatorios}>Relatórios</Text>
           </View>
           <View style={styles.cardOptions}>
-            <FontAwesome5 name='border-none' size={23} color='#fff'/>
+            <Image source={IconCategoria} style={{width:27, height:27,}}/>
             <Text style={styles.textRelatorios}>Categorias</Text>
+          </View>
+          <View style={styles.cardOptions}>
+            <Image source={IconSocios} style={{width:27, height:27,}}/>
+            <Text style={styles.textRelatorios}>Sócios & Funcionários</Text>
           </View>
 
           {/* Seção Mais Opções */}
@@ -164,6 +193,8 @@ export default function Home(){
               <Text style={styles.textCard}>Universidade{'\n'}Da Quel</Text>
             </View>
           </View>
+
+          
 
         </View>
 
@@ -429,7 +460,7 @@ const styles = StyleSheet.create({
     height:93,
     flexDirection:'row',
     alignItems:'center',
-    backgroundColor:'#75A2C6',
+    backgroundColor:'#000',
     borderRadius:20,
     },
     textCard:{
@@ -439,6 +470,15 @@ const styles = StyleSheet.create({
       top:40,
       left:65,
       textAlign:'left',
+    },
+
+
+    cardDropDown:{
+      backgroundColor:'#fff',
+      width:'80%',
+      height:'auto',
+      marginBottom:20,
+      borderRadius:15,
     },
 
 });
