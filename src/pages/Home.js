@@ -10,6 +10,10 @@ import { StyleSheet,
 
 import { useNavigation } from '@react-navigation/core'
 
+//importes dos componentes da home
+import ButtonCard from '../components/ButtonCard'
+import ButtonRow from '../components/ButtonRow'
+
 //importes dos icones usados na view
 import butonToggle from '../assets/icons/icon-toggle.png'
 import buttonSing from '../assets/icons/icon-sino.png'
@@ -36,44 +40,52 @@ import { FontAwesome5 } from '@expo/vector-icons'
 export default function Home(){
   const navigation = useNavigation();
   
-  return(
+  return (
     <SafeAreaView style={styles.container}>
-      
-      <StatusBar/>
- 
-      <ScrollView >
+      <StatusBar />
+
+      <ScrollView>
         <View style={styles.content}>
           {/** Seção do Header*/}
           <View style={styles.header}>
-            <TouchableOpacity onPress={() =>{navigation.goBack()}}>
-              <Image source={butonToggle} style={{width:20, height:20,}}/>
+            <TouchableOpacity
+              onPress={() => {
+                navigation.goBack();
+              }}
+            >
+              <Image source={butonToggle} style={{ width: 20, height: 20 }} />
             </TouchableOpacity>
             <View style={styles.headerContent}>
-             
               <View style={styles.realidBox}>
-              
                 <Text style={styles.realidText}>Realizado</Text>
-                <FontAwesome5 name='chevron-down' color='#fff'/>
-                
+                <FontAwesome5 name="chevron-down" color="#fff" />
               </View>
-              <Image source={buttonSing} style={{width:20, height:22,}}/>
+              <Image source={buttonSing} style={{ width: 20, height: 22 }} />
             </View>
           </View>
 
           {/* Seção de perfil */}
           <View style={styles.perfilContainer}>
-            <Image source={AvatarHome}
-                  style={styles.avatarHome}/>
+            <Image source={AvatarHome} style={styles.avatarHome} />
             <View style={styles.infoContainer}>
               <Text style={styles.nameAvatar}>Renata Mendes</Text>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorder}><View style={styles.barraProgress}></View></View><Text style={styles.progressText}>NIVEL 1</Text>
+                <View style={styles.barraBorder}>
+                  <View style={styles.barraProgress}></View>
+                </View>
+                <Text style={styles.progressText}>NIVEL 1</Text>
               </View>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorderBlack}><View style={styles.barraProgressBlack}></View></View><Text style={styles.progressTextBlack}>50 PTS</Text>
+                <View style={styles.barraBorderBlack}>
+                  <View style={styles.barraProgressBlack}></View>
+                </View>
+                <Text style={styles.progressTextBlack}>50 PTS</Text>
               </View>
               <View style={styles.progressContainer}>
-                <View style={styles.barraBorderGreen}><View style={styles.barraProgressGreen}></View></View><Text style={styles.progressTextGreen}>RF</Text>
+                <View style={styles.barraBorderGreen}>
+                  <View style={styles.barraProgressGreen}></View>
+                </View>
+                <Text style={styles.progressTextGreen}>RF</Text>
               </View>
             </View>
           </View>
@@ -83,17 +95,19 @@ export default function Home(){
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{width:27, height:21,}}/>
+                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
-                  <Image source={iconEye} style={{width:18, height:13,}}/>
+                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
+                  <Image
+                    source={iconArrowBottom}
+                    style={{ width: 15, height: 13 }}
+                  />
                 </TouchableOpacity>
-                
               </View>
             </View>
           </View>
@@ -102,15 +116,20 @@ export default function Home(){
             <Text style={styles.tittleText}>Níveis de Caixa</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{width:27, height:21,}}/>
+                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
                 <Text>R$ 55.265,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
-                  <Image source={iconEye} style={{width:18, height:13,}}/>
+                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('NiveisDeCaixa')}>
-                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("NiveisDeCaixa")}
+                >
+                  <Image
+                    source={iconArrowBottom}
+                    style={{ width: 15, height: 13 }}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
@@ -120,85 +139,103 @@ export default function Home(){
             <Text style={styles.tittleText}>Resultado Financeiro</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{width:27, height:21,}}/>
+                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
                 <Text>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
-                  <Image source={iconEye} style={{width:18, height:13,}}/>
+                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
                 </TouchableOpacity>
-                <TouchableOpacity onPress={() => navigation.navigate('Detalhes')}>
-                  <Image source={iconArrowBottom} style={{width:15, height:13,}}/>
+                <TouchableOpacity
+                  onPress={() => navigation.navigate("Detalhes")}
+                >
+                  <Image
+                    source={iconArrowBottom}
+                    style={{ width: 15, height: 13 }}
+                  />
                 </TouchableOpacity>
               </View>
             </View>
           </View>
 
-        
-          {/* Seção Botoes */}
+          {/* Seção de Botões Card*/}
           <View style={styles.botoesContainer}>
-            <View style={styles.botao}>
-              <Image source={IconConciliacaoContas} style={{width:41, height:46,}}/>
-              <Text style={styles.textBotao}>Conciliação de Contas</Text>
-            </View>
-            <View style={styles.botao}>
-            <Image source={IconSaidas} style={{width:53, height:38,}}/>
-              <Text style={styles.textBotao}>Saidas</Text>
-            </View>
-            <View style={styles.botao}>
-            <Image source={IconCobranca} style={{width:67, height:40,}}/>
-              <Text style={styles.textBotao}>Cobranças Pendentes</Text>
-            </View>
-            <View style={styles.botao}>
-            <Image source={IconEntradas} style={{width:60, height:47,}}/>
-              <Text style={styles.textBotao}>Entradas</Text>
-            </View>
-
+            <ButtonCard
+              tituloButon="Conciliação de Contas"
+              source={IconConciliacaoContas}
+              borderTopRightRadius={15}
+              borderBottomEndRadius={15}
+              borderBottomLeftRadius={15}
+              width={41}
+              height={46}
+            />
+            <ButtonCard
+              tituloButon="Saidas"
+              source={IconSaidas}
+              borderTopLeftRadius={15}
+              borderBottomEndRadius={15}
+              borderBottomLeftRadius={15}
+              width={53}
+              height={39}
+            />
+            <ButtonCard
+              tituloButon="Cobranças Pendentes"
+              source={IconCobranca}
+              borderTopLeftRadius={15}
+              borderBottomEndRadius={15}
+              borderTopRightRadius={15}
+              width={67}
+              height={40}
+            />
+            <ButtonCard
+              tituloButon="Entradas"
+              source={IconEntradas}
+              borderTopRightRadius={15}
+              borderTopLeftRadius={15}
+              borderBottomLeftRadius={15}
+              width={60}
+              height={46}
+            />
           </View>
 
-          {/* Seção botoes elims */}
-          <View style={styles.cardOptions}>
-            <Image source={IconBoxDollar} style={{width:30, height:28,}}/>
-            <Text style={styles.textRelatorios}>Precificação de Produtos & Serviços</Text>
-          </View>
-          <View style={styles.cardOptions}>
-            <Image source={IconRelatorios} style={{width:21, height:31,}}/>
-            <Text style={styles.textRelatorios}>Relatórios</Text>
-          </View>
-          <View style={styles.cardOptions}>
-            <Image source={IconCategoria} style={{width:27, height:27,}}/>
-            <Text style={styles.textRelatorios}>Categorias</Text>
-          </View>
-          <View style={styles.cardOptions}>
-            <Image source={IconSocios} style={{width:27, height:27,}}/>
-            <Text style={styles.textRelatorios}>Sócios & Funcionários</Text>
-          </View>
+          {/* Seção de botões estilos linha */}
+          <ButtonRow textButton='Precificação de Produtos & Serviços' 
+                     source={IconBoxDollar}
+                     widthIcon={30}
+                     heightIcon={28}/>
+          <ButtonRow textButton='Relatórios' 
+                     source={IconRelatorios}
+                     widthIcon={21}
+                     heightIcon={31}/>
+          <ButtonRow textButton='Categorias' 
+                     source={IconCategoria}
+                     widthIcon={27}
+                     heightIcon={27}/>
+          <ButtonRow textButton='Sócios & Funcionários' 
+                     source={IconSocios}
+                     widthIcon={27}
+                     heightIcon={27}/>
 
           {/* Seção Mais Opções */}
           <View style={styles.profileContainer}>
-            <Image source={Capa}/>
+            <Image source={Capa} />
             <View style={styles.profileContent}>
-              <Image source={AvatarProfile} style={styles.avatarProfile}/>
+              <Image source={AvatarProfile} style={styles.avatarProfile} />
               <Text style={styles.profileText}>Atatica Studios</Text>
             </View>
           </View>
           {/* Container Box */}
           <View style={styles.cardsContainer}>
             <View style={styles.cardMap}>
-              <Image source={CardMap} style={styles.cardImg}/>
+              <Image source={CardMap} style={styles.cardImg} />
             </View>
 
             <View style={styles.cardGirl}>
-              <Image source={GirlStudy} style={styles.cardImg}/>
-              <Text style={styles.textCard}>Universidade{'\n'}Da Quel</Text>
+              <Image source={GirlStudy} style={styles.cardImg} />
+              <Text style={styles.textCard}>Universidade{"\n"}Da Quel</Text>
             </View>
           </View>
-
-          
-
         </View>
-
-
       </ScrollView>
     </SafeAreaView>
   );
@@ -365,24 +402,10 @@ const styles = StyleSheet.create({
     width:350,
     marginTop:25,
     flexDirection:'row',
+    justifyContent:'space-evenly',
     flexWrap:'wrap',
   },
-  botao:{
-    borderWidth:3,
-    borderTopRightRadius:15,
-    borderBottomEndRadius:15,
-    borderBottomLeftRadius:15,
-    justifyContent:'center',
-    alignItems:'center',
-    borderColor:'#691CC7',
-    width:150,
-    height:115,
-    margin:10,
-  },
-  textBotao:{
-    color:'#691CC7',
-    textAlign:'center',
-  },
+  
   // Card Options
   cardOptions:{
     flexDirection:'row',
