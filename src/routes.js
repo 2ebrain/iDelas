@@ -12,6 +12,8 @@ import TermsContracts from '../src/pages/TermsContracts'
 import NiveisDeCixa from '../src/pages/NiveisDeCaixa'
 import Detalhes from '../src/pages/Detalhes'
 import Home from './pages/Home'
+import ConciliacaoDeContas from './pages/ConciliacaoDeContas'
+import TestView from './pages/ViewLoading'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -27,6 +29,8 @@ export default function Routes() {
             <Screen name="NiveisDeCaixa" component={NiveisDeCixa} />
             <Screen name="Detalhes" component={Detalhes} />
             <Screen name="Home" component={Home} />
+            <Screen name="ConciliacaoDeContas" component={ConciliacaoDeContas}/>
+            <Screen name="TestView" component={TestView}/>
         </Navigator>
     </NavigationContainer>
    );

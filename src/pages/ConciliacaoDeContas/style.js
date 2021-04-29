@@ -1,0 +1,123 @@
+import {StyleSheet} from 'react-native'
+
+
+export default StyleSheet.create({
+  content:{
+    alignItems:'center',
+  },
+  header:{
+    width:'100%',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+    padding:25,
+
+  },
+  headerContent:{
+    flexDirection:'row',
+    width:135,
+    alignItems:'center',
+    justifyContent:'space-between',
+
+  },
+  realidBox:{
+    width:100,
+    height:25,
+    padding:6,
+    backgroundColor:'#691CC7',
+    alignItems:'center',
+    justifyContent:'space-between',
+    flexDirection:'row',
+    borderRadius:10,
+  },
+  realidText:{
+    color:'#fff',
+    fontSize:14,
+  },
+  //Seção do Perfil
+  perfilContainer:{
+    flexDirection:'row',
+    width:'100%',
+    padding:15,
+    justifyContent:'space-evenly',
+    alignItems:'center',
+  },
+  avatarHome:{
+    width:100,
+    height:100,
+  },
+  infoContainer:{
+    width:230,
+    justifyContent:'flex-start',
+    alignItems:'flex-start',
+ 
+  },
+  nameAvatar:{
+    fontSize:15,
+    marginBottom:10,
+  },
+  /*Barra de progressao do perfil*/ 
+  progressContainer:{
+    width:'100%',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-between',
+  },
+  barraBorder:{
+    width:150,
+    height:15,
+    borderWidth:2,
+    borderColor:'#7B1DCC',
+    borderRadius:7,
+    marginBottom:5,
+  },
+  barraProgress:{
+    width:'30%',
+    height:'100%',
+    backgroundColor:'#7B1DCC',
+  },
+  progressText:{
+    fontSize:13,
+    color:'#691CC7',
+  },
+  //Progrção Preta
+  barraBorderBlack:{
+    width:150,
+    height:15,
+    borderWidth:2,
+    borderColor:'#000',
+    borderRadius:7,
+    marginBottom:5,
+  },
+  barraProgressBlack:{
+    width:'15%',
+    height:'100%',
+    backgroundColor:'#000',
+  },
+  progressTextBlack:{
+    fontSize:13,
+    color:'#000',
+  },
+  //Progrção Verde
+  barraBorderGreen:{
+    width:150,
+    height:15,
+    borderWidth:2,
+    borderColor:'#40CC4B',
+    borderRadius:7,
+    marginBottom:5,
+  },
+  barraProgressGreen:{
+    width:'78%',
+    height:'100%',
+    backgroundColor:'#40CC4B',
+  },
+  progressTextGreen:{
+    textAlign:'center',
+    fontSize:12,
+    width:45,
+    backgroundColor:'#40CC4B',
+    borderRadius:10,
+    color:'#fff',
+  },
+})

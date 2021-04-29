@@ -44,7 +44,7 @@ export default function Home(){
     <SafeAreaView style={styles.container}>
       <StatusBar />
 
-      <ScrollView>
+      <ScrollView>  
         <View style={styles.content}>
           {/** Seção do Header*/}
           <View style={styles.header}>
@@ -162,6 +162,7 @@ export default function Home(){
           <View style={styles.botoesContainer}>
             <ButtonCard
               tituloButon="Conciliação de Contas"
+              onPress={()=>{navigation.navigate('ConciliacaoDeContas')}}
               source={IconConciliacaoContas}
               borderTopRightRadius={15}
               borderBottomEndRadius={15}
@@ -171,6 +172,7 @@ export default function Home(){
             />
             <ButtonCard
               tituloButon="Saidas"
+              onPress={()=>{navigation.navigate('TestView')}}
               source={IconSaidas}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
@@ -180,6 +182,7 @@ export default function Home(){
             />
             <ButtonCard
               tituloButon="Cobranças Pendentes"
+              onPress={()=>{navigation.navigate('TestView')}}
               source={IconCobranca}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
@@ -189,6 +192,7 @@ export default function Home(){
             />
             <ButtonCard
               tituloButon="Entradas"
+              onPress={()=>{navigation.navigate('TestView')}}
               source={IconEntradas}
               borderTopRightRadius={15}
               borderTopLeftRadius={15}
@@ -200,18 +204,22 @@ export default function Home(){
 
           {/* Seção de botões estilos linha */}
           <ButtonRow textButton='Precificação de Produtos & Serviços' 
+                     onPress={()=>{navigation.navigate('TestView')}}
                      source={IconBoxDollar}
                      widthIcon={30}
                      heightIcon={28}/>
-          <ButtonRow textButton='Relatórios' 
+          <ButtonRow textButton='Relatórios'
+                     onPress={()=>{navigation.navigate('TestView')}} 
                      source={IconRelatorios}
                      widthIcon={21}
                      heightIcon={31}/>
-          <ButtonRow textButton='Categorias' 
+          <ButtonRow textButton='Categorias'
+                     onPress={()=>{navigation.navigate('TestView')}} 
                      source={IconCategoria}
                      widthIcon={27}
                      heightIcon={27}/>
-          <ButtonRow textButton='Sócios & Funcionários' 
+          <ButtonRow textButton='Sócios & Funcionários'
+                     onPress={()=>{navigation.navigate('TestView')}} 
                      source={IconSocios}
                      widthIcon={27}
                      heightIcon={27}/>
