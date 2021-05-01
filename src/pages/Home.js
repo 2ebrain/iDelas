@@ -13,10 +13,9 @@ import { useNavigation } from '@react-navigation/core'
 //importes dos componentes da home
 import ButtonCard from '../components/ButtonCard'
 import ButtonRow from '../components/ButtonRow'
+import Header from '../components/Header'
 
 //importes dos icones usados na view
-import butonToggle from '../assets/icons/icon-toggle.png'
-import buttonSing from '../assets/icons/icon-sino.png'
 import iconDollar from '../assets/icons/dollar-coin.png'
 import iconEye from '../assets/icons/icon-eye-gray.png'
 import iconArrowBottom from '../assets/icons/icon-arrow-bottom.png'
@@ -35,60 +34,15 @@ import Capa from '../assets/capa.png'
 import CardMap from '../assets/map-image.png'
 import GirlStudy from '../assets/university-girl.png'
 
-import { FontAwesome5 } from '@expo/vector-icons'
-
 export default function Home(){
   const navigation = useNavigation();
   
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar />
-
       <ScrollView>  
         <View style={styles.content}>
-          {/** Seção do Header*/}
-          <View style={styles.header}>
-            <TouchableOpacity
-              onPress={() => {
-                navigation.goBack();
-              }}
-            >
-              <Image source={butonToggle} style={{ width: 20, height: 20 }} />
-            </TouchableOpacity>
-            <View style={styles.headerContent}>
-              <View style={styles.realidBox}>
-                <Text style={styles.realidText}>Realizado</Text>
-                <FontAwesome5 name="chevron-down" color="#fff" />
-              </View>
-              <Image source={buttonSing} style={{ width: 20, height: 22 }} />
-            </View>
-          </View>
-
-          {/* Seção de perfil */}
-          <View style={styles.perfilContainer}>
-            <Image source={AvatarHome} style={styles.avatarHome} />
-            <View style={styles.infoContainer}>
-              <Text style={styles.nameAvatar}>Renata Mendes</Text>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorder}>
-                  <View style={styles.barraProgress}></View>
-                </View>
-                <Text style={styles.progressText}>NIVEL 1</Text>
-              </View>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorderBlack}>
-                  <View style={styles.barraProgressBlack}></View>
-                </View>
-                <Text style={styles.progressTextBlack}>50 PTS</Text>
-              </View>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorderGreen}>
-                  <View style={styles.barraProgressGreen}></View>
-                </View>
-                <Text style={styles.progressTextGreen}>RF</Text>
-              </View>
-            </View>
-          </View>
+          <Header nickName='Renata Mendes' source={AvatarHome}/>
 
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
