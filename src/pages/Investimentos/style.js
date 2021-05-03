@@ -1,0 +1,107 @@
+import {StyleSheet} from 'react-native'
+
+
+export default StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  // Segunda seção após Header,
+  // Contendo as informações de saldo e banco
+  content:{
+    width:'100%',
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:30,             
+  },
+  titulo:{
+    width:'100%',
+    paddingHorizontal:25,
+    marginBottom:10,
+  },
+  textTitulo:{
+    fontSize:15,
+    color:'#691CC7',
+  },
+  contentAccount:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    width:'90%',
+    height:100,
+    borderWidth:2,
+    borderColor:'#F4CDBB',
+    borderRadius:20,
+    padding:15,
+  },
+  boxAccount:{
+    width:180,
+  },
+  boxBank:{
+    flexDirection:'row',
+    justifyContent:'flex-start',
+    alignItems:'center',
+  },
+  iconArrow:{
+    width:10,
+    height:10,
+    marginLeft:20,
+  },
+  textAcc:{
+    fontSize:11,
+    color:'#7C7C7C',
+  },
+  textBank:{
+    fontSize:14,
+    color:'#7C7C7C',
+    marginBottom:5,
+  },
+  Mountante:{
+    padding:5,
+  },
+  textSaldo:{
+    fontSize:10,
+    color:'#7C7C7C',
+  },
+  textMoney:{
+    fontSize:13,
+    color:'#7C7C7C',
+  },
+  textTrans:{
+    width:'100%',
+    padding:3,
+    backgroundColor:'#F9A179',
+    borderRadius:5,
+    color:'#fff',
+    fontSize:13,
+    textAlign:'center',
+    elevation:3,
+    },
+    // Botões flutuantes
+    sectionButtons:{
+      flexDirection:'row',
+      width:'100%',
+      justifyContent:'space-around',
+      marginTop:16,
+    },
+    button:{
+      width:170,
+      backgroundColor:'#691CC7',
+      flexDirection:'row',
+      alignItems:'center',
+      justifyContent:'space-evenly',
+      borderRadius:10,
+    },
+    iconCirclePlus:{
+      width:20,
+      height:20,
+    },
+    buttonText:{
+      color:'#fff',
+      fontSize:10,
+      textAlign:'left',
+      paddingVertical:10
+    },
+    
+})

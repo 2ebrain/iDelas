@@ -16,7 +16,7 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
-    "react-native-collapsible": "^1.5.3",
+    "react-native-collapsible": "^1.6.0",
     "react-native-dropdown-menu": "^2.0.0",
     "react-native-gesture-handler": "~1.8.0",
     "react-native-masked-text": "^1.13.0",

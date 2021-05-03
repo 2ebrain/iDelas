@@ -1,0 +1,112 @@
+import {StyleSheet} from 'react-native'
+
+export default StyleSheet.create({
+  container:{
+    flex:1,
+    justifyContent:'center',
+    alignItems:'center',
+  },
+  // Segunda seção após Header,
+  // Contendo as informações de saldo e banco
+  content:{
+    width:'100%',
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:30,             
+  },
+  titulo:{
+    width:'100%',
+    paddingHorizontal:23,
+    marginBottom:15,
+  },
+  textTitulo:{
+    fontSize:15,
+    color:'#691CC7',
+  },
+  mapaImg:{
+    width:322,
+    height:428,
+  },
+  // Botões flutuantes
+  sectionButtons:{
+    flexDirection:'row',
+    width:'100%',
+    justifyContent:'space-around',
+  },
+  button:{
+    width:170,
+    backgroundColor:'#691CC7',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-evenly',
+    borderRadius:10,
+  },
+  iconCirclePlus:{
+    width:20,
+    height:20,
+  },
+  buttonText:{
+    color:'#fff',
+    fontSize:10,
+    textAlign:'left',
+    paddingVertical:10
+  },
+  // ListaBox de funcionarios e socios
+  sectionContent:{
+    width:'100%',
+    justifyContent:'center',
+    alignItems:'center',
+    marginTop:30,
+  },
+  titleSection:{
+    width:'90%',
+    justifyContent:'flex-start',
+    marginBottom:19,
+  },
+  cardContainer:{
+    backgroundColor:'#fff',
+    justifyContent:'center',
+    alignItems:'center',
+    width:'90%',
+    borderRadius:10,
+    padding:16,
+    elevation:3,
+  },
+  produtoItem:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    width:'95%',
+    borderWidth:1,
+    borderColor:'#C4C4C4',
+    borderRadius:10,
+    marginBottom:15,
+    marginBottom:15,
+  },
+  productContent:{
+    flexDirection:'row',
+    padding:10,
+  },
+  circleProdut:{
+    width:50,
+    height:50,
+    borderRadius:50,
+    backgroundColor:'#691CC7',
+  },
+  textProduto:{
+    color:'#7C7C7C',
+    fontSize:11,
+    paddingHorizontal:9,
+  },
+  productName:{
+    fontSize:13,
+    color:'#691CC7',
+  },
+  iconPlusProduct:{
+    width:25,
+    height:25,
+    marginRight:25,
+  }
+
+    
+})

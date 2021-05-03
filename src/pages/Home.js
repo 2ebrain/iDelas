@@ -146,7 +146,7 @@ export default function Home(){
             />
             <ButtonCard
               tituloButon="Entradas"
-              onPress={()=>{navigation.navigate('TestView')}}
+              onPress={()=>{navigation.navigate('Entradas')}}
               source={IconEntradas}
               borderTopRightRadius={15}
               borderTopLeftRadius={15}
@@ -158,22 +158,22 @@ export default function Home(){
 
           {/* Seção de botões estilos linha */}
           <ButtonRow textButton='Precificação de Produtos & Serviços' 
-                     onPress={()=>{navigation.navigate('TestView')}}
+                     onPress={()=>{navigation.navigate('ProdutosServicos')}}
                      source={IconBoxDollar}
                      widthIcon={30}
                      heightIcon={28}/>
           <ButtonRow textButton='Relatórios'
-                     onPress={()=>{navigation.navigate('TestView')}} 
+                     onPress={()=>{navigation.navigate('Relatorios')}} 
                      source={IconRelatorios}
                      widthIcon={21}
                      heightIcon={31}/>
           <ButtonRow textButton='Categorias'
-                     onPress={()=>{navigation.navigate('TestView')}} 
+                     onPress={()=>{navigation.navigate('Categorias')}} 
                      source={IconCategoria}
                      widthIcon={27}
                      heightIcon={27}/>
           <ButtonRow textButton='Sócios & Funcionários'
-                     onPress={()=>{navigation.navigate('TestView')}} 
+                     onPress={()=>{navigation.navigate('FuncionariosSocios')}} 
                      source={IconSocios}
                      widthIcon={27}
                      heightIcon={27}/>
@@ -192,10 +192,10 @@ export default function Home(){
               <Image source={CardMap} style={styles.cardImg} />
             </View>
 
-            <View style={styles.cardGirl}>
+            <TouchableOpacity style={styles.cardGirl} onPress={() =>{navigation.navigate('MyNegoces')}}>
               <Image source={GirlStudy} style={styles.cardImg} />
               <Text style={styles.textCard}>Universidade{"\n"}Da Quel</Text>
-            </View>
+            </TouchableOpacity>
           </View>
         </View>
       </ScrollView>

@@ -103,107 +103,39 @@ export default StyleSheet.create({
       textAlign:'left',
       paddingVertical:10
     },
-    // Botões Flutuantes de Configuração
-    sectionConfig:{
-      flexDirection:'row',
+    // Seção de entrada e Saida
+    contentEntrada:{
       width:'100%',
-      justifyContent:'flex-end',
-      paddingHorizontal:18,
-      marginTop:25,
-    },
-    buttonIcon:{},
-    iconImg:{
-      width:25,
-      height:25,
-    },
-    boxButons:{
-      width:95,
-      flexDirection:'row',
-      justifyContent:'space-around',
-    },
-    background:{
-      backgroundColor:'#fff',
-    },
-    // Card de transações
-    cardFinancer:{
-      backgroundColor:'#fff',
-      width:'90%',
-      borderRadius:10,
-      marginTop:15,
-      marginBottom:20,
-      padding:8,
-    },
-    headerCard:{
-      flexDirection:'row',
-      width:'100%',
-      justifyContent:'space-between',
+      justifyContent:'center',
       alignItems:'center',
-      borderBottomWidth:1,
-      borderColor:'#ADADAD',
-      padding:5,
+      marginTop:31,
+      marginBottom:15,
     },
-    tituloCard:{
-      color:'#691CC7',
+    boxTitulo:{
+      width:'100%',
+      alignItems:'flex-start',
+    },
+    tituloEntrada:{
       fontSize:15,
+      color:'#691CC7',
+      paddingHorizontal:27,
+      marginBottom:15,
+
     },
-    arrowIcon:{
-      width:15,
-      height:15,
+    containerEntrada:{
+      flexDirection:'row',
+      justifyContent:'space-between',
+      alignItems:'center',
+      width:'89%',
+      backgroundColor:'#fff',
+      paddingVertical:12,
+      paddingHorizontal:13,
+      marginBottom:7,
+      borderRadius:10,
     },
-    contentCard:{
-      padding:13,
-    },
-    textCard:{
-      color:'#8B8B8B',
-      fontSize:12,
-      lineHeight:16,
-    },
-    textAlertCard:{
-      width:'65%',
-      backgroundColor:'#C3C3C3',
-      color:'#fff',
-      borderRadius:50,
-      marginTop:9,
+    textoptions:{
       fontSize:13,
-      textAlign:'center',
+      color:'#691CC7',
+      textTransform:'uppercase',
     },
-    footerCard:{
-      flexDirection:'row',
-      justifyContent:'space-between',
-      alignItems:'center',
-      borderTopWidth:1,
-      paddingHorizontal:5,
-      paddingVertical:15,
-    },
-    textCash:{
-       fontSize:15,
-       color:'#6D8E38',
-    },
-    boxIcons:{
-      flexDirection:'row',
-      width:100,
-      justifyContent:'space-around',
-    },
-    // Seção de Saldo
-    containerSaldo:{
-      flexDirection:'row',
-      justifyContent:'space-between',
-      alignItems:'center',
-      paddingHorizontal:21,
-      paddingVertical:16,
-      borderWidth:1,
-      borderColor:'#F4CDBB',
-      width:'90%',
-      borderRadius:50,
-      marginBottom:20,
-    },
-    textSaldoFinal:{
-      color:'#7C7C7C',
-      fontSize:11,
-    },
-    textCashFinal:{
-      color:'#7C7C7C',
-      fontSize:14,
-    },
-    
 })

@@ -103,107 +103,49 @@ export default StyleSheet.create({
       textAlign:'left',
       paddingVertical:10
     },
-    // Botões Flutuantes de Configuração
-    sectionConfig:{
-      flexDirection:'row',
-      width:'100%',
-      justifyContent:'flex-end',
-      paddingHorizontal:18,
-      marginTop:25,
-    },
-    buttonIcon:{},
-    iconImg:{
-      width:25,
-      height:25,
-    },
-    boxButons:{
-      width:95,
-      flexDirection:'row',
-      justifyContent:'space-around',
-    },
-    background:{
-      backgroundColor:'#fff',
-    },
-    // Card de transações
-    cardFinancer:{
+    //Lista de items
+    listProdutos:{
+      alignItems:'center',
       backgroundColor:'#fff',
       width:'90%',
-      borderRadius:10,
       marginTop:15,
-      marginBottom:20,
-      padding:8,
+      borderRadius:10,
+      elevation:4,
+      padding:17,
     },
-    headerCard:{
-      flexDirection:'row',
-      width:'100%',
-      justifyContent:'space-between',
-      alignItems:'center',
-      borderBottomWidth:1,
-      borderColor:'#ADADAD',
-      padding:5,
-    },
-    tituloCard:{
-      color:'#691CC7',
-      fontSize:15,
-    },
-    arrowIcon:{
-      width:15,
-      height:15,
-    },
-    contentCard:{
-      padding:13,
-    },
-    textCard:{
-      color:'#8B8B8B',
-      fontSize:12,
-      lineHeight:16,
-    },
-    textAlertCard:{
-      width:'65%',
-      backgroundColor:'#C3C3C3',
-      color:'#fff',
-      borderRadius:50,
-      marginTop:9,
-      fontSize:13,
-      textAlign:'center',
-    },
-    footerCard:{
+    produtoItem:{
       flexDirection:'row',
       justifyContent:'space-between',
       alignItems:'center',
-      borderTopWidth:1,
-      paddingHorizontal:5,
-      paddingVertical:15,
-    },
-    textCash:{
-       fontSize:15,
-       color:'#6D8E38',
-    },
-    boxIcons:{
-      flexDirection:'row',
-      width:100,
-      justifyContent:'space-around',
-    },
-    // Seção de Saldo
-    containerSaldo:{
-      flexDirection:'row',
-      justifyContent:'space-between',
-      alignItems:'center',
-      paddingHorizontal:21,
-      paddingVertical:16,
+      width:'95%',
       borderWidth:1,
-      borderColor:'#F4CDBB',
-      width:'90%',
-      borderRadius:50,
-      marginBottom:20,
+      borderColor:'#C4C4C4',
+      borderRadius:10,
+      marginBottom:15,
+      marginBottom:15,
     },
-    textSaldoFinal:{
+    productContent:{
+      flexDirection:'row',
+      padding:10,
+    },
+    circleProdut:{
+      width:50,
+      height:50,
+      borderRadius:50,
+      backgroundColor:'#691CC7',
+    },
+    textProduto:{
       color:'#7C7C7C',
       fontSize:11,
+      paddingHorizontal:9,
     },
-    textCashFinal:{
-      color:'#7C7C7C',
-      fontSize:14,
+    productName:{
+      fontSize:13,
+      color:'#691CC7',
     },
-    
+    iconPlusProduct:{
+      width:25,
+      height:25,
+      marginRight:25,
+    }
 })

@@ -67,7 +67,7 @@ export default function (props){
             borderColor='#40CC4B'
             backgroundColor='#40CC4B'
             backgroundColorTitle='#40CC4B'
-            porcemtagem={30}
+            porcemtagem={75}
            />
         </View>
 

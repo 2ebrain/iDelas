@@ -14,6 +14,12 @@ import Detalhes from '../src/pages/Detalhes'
 import Home from './pages/Home'
 import ConciliacaoDeContas from './pages/ConciliacaoDeContas'
 import TestView from './pages/ViewLoading'
+import ProdutosServicos from './pages/ProdutosServicos'
+import Relatorios from './pages/Relatorios'
+import Categorias from './pages/Categorias'
+import MyNegoces from './pages/MeuNegocio'
+import FuncionariosSocios from './pages/FuncionariosSocios'
+import Entradas from './pages/Entradas'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -31,6 +37,12 @@ export default function Routes() {
             <Screen name="Home" component={Home} />
             <Screen name="ConciliacaoDeContas" component={ConciliacaoDeContas}/>
             <Screen name="TestView" component={TestView}/>
+            <Screen name="ProdutosServicos" component={ProdutosServicos}/>
+            <Screen name="Relatorios" component={Relatorios}/>
+            <Screen name="Categorias" component={Categorias}/>
+            <Screen name="MyNegoces" component={MyNegoces}/>
+            <Screen name="FuncionariosSocios" component={FuncionariosSocios}/>
+            <Screen name="Entradas" component={Entradas}/>
         </Navigator>
     </NavigationContainer>
    );
