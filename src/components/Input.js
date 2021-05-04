@@ -1,10 +1,13 @@
 import React from 'react'
 import {TextInput, StyleSheet} from 'react-native'
 
-
+// Apenas um componente simples de input que recebe algumas próps do componente acima.
 export default props => {
     return (
-        <TextInput style={[styles.input, {borderColor : props.colorBorder}, {width: props.width}]} 
+        <TextInput style={[styles.input, 
+                            {borderColor : props.colorBorder}, 
+                            {width: props.width},
+                            {backgroundColor: props.backgroundColor}]} 
                   placeholder={props.placeholder}
                   placeholderTextColor='#fff'
                     secureTextEntry={props.secureTextEntry}
@@ -15,10 +18,11 @@ export default props => {
                   />);
 }
 
-
 const styles = StyleSheet.create({
     input:{
-        padding:15,
+        color:'#fff',
+        paddingVertical:15,
+        paddingHorizontal:23,
         fontSize:12,
         justifyContent:'center',
         alignItems:'center',

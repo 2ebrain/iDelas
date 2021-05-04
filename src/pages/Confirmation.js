@@ -1,5 +1,5 @@
 import React from 'react'
-import  {View, StyleSheet, Image, Text} from 'react-native'
+import  {View, StyleSheet, Image, Text, SafeAreaView} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import Logo from  '../assets/Logo_iDelas.png'
@@ -16,14 +16,15 @@ export default function Confirmation(){
     navigation.navigate('TermsContracts');
   }
     return(
-      <View style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <View style={styles.backngroundPrimary}>
               <View style={styles.content}>
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.textBox}>
-                    <Text style={styles.text}>Quase lá! Você esta prestes a gerir a sua 
-                        empresa com eficácia e qualidade. 
-                        Confirme seu endereço de e-mail 
+                    <Text style={styles.text}>
+                      Falta pouco! Confirme seu endereço{'\n'} 
+                      de e-mail para começar a resolver a{'\n'} 
+                      gestão financeira{'\n'}de seu negócio. 
                     </Text>
                 </View>
                 <Image source={Mascot}
@@ -42,7 +43,7 @@ export default function Confirmation(){
                 </View>
               </View>
         </View>
-      </View>
+      </SafeAreaView>
     );
 }
 
@@ -63,23 +64,22 @@ const styles = StyleSheet.create({
       alignItems:'center',
     },
     logo:{
-      width:164,
-      height:48,
+      width:147,
+      height:42,
       marginBottom:21,
-
     },
     textBox:{
         marginBottom:22,
     },
     text:{
         fontSize:18,
-        width:302,
+        width:'90%',
         textAlign:'center',
-        marginHorizontal:41,
         color:'#fff',
+        lineHeight:21,
     },
     mascot:{
-        width:118,
+        width:116,
         height:175,
     },
     resendBox:{

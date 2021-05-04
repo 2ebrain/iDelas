@@ -53,9 +53,11 @@ const styles = StyleSheet.create({
   },
   input:{
     width:'80%',
-    height:43,
+    height:44,
     color:'#fff',
-    padding:8,
+    fontSize:13,
+    paddingVertical:15,
+    paddingHorizontal:20,
   },
   icon:{
     width:'20%',

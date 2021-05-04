@@ -2,8 +2,8 @@ import React from 'react'
 import  {SafeAreaView, View, 
                       StyleSheet, 
                       ImageBackground, 
-                      Image, Text, 
-                      StatusBar} from 'react-native'
+                      Image, Text, TouchableOpacity, 
+                      KeyboardAvoidingView} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import BrackgroundSub from '../assets/circuitos_.png'
@@ -19,35 +19,30 @@ import Link from '../components/Link'
 import Botao from '../components/Button'
 
 export default function Login(){
-  state = {
-    email:'',
-    password:'',
-  }
-  const navigation = useNavigation();
+  const navigation = useNavigation()
 
   function handleNavigateToRegisterDetails(){
-    navigation.navigate('Register');
+    navigation.navigate('Register')
   }
   function login(){
-    navigation.navigate('Home');
+    navigation.navigate('Home')
   }
 
-  
-    return(
-      <SafeAreaView style={styles.container}>
-        <StatusBar/>
-        <View style={styles.backngroundPrimary}>
-          <ImageBackground source={BrackgroundSub} style={styles.brackgroundSub}>
-              <View style={styles.content}>
+  return(
+    <SafeAreaView style={styles.container}>
+      <View style={styles.backngroundPrimary}>
+        <ImageBackground source={BrackgroundSub} style={styles.brackgroundSub}>
+            <View style={styles.content}>
+              <KeyboardAvoidingView style={styles.contentLogin} 
+                                    behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.inputBox}>
                     <Input placeholder='E-mail ou Usuário' 
                           colorBorder='#FFFFFF' 
+                          backgroundColor='#751DCB'
                           textContentType='emailAddress'
                           width={250}
                           keyboardType='email-address'
-                          onChangeText={email => setState({email})}
-                          
                     />
                     <InputPassword/>
                 </View>
@@ -56,8 +51,8 @@ export default function Login(){
                 />
                 <Botao tittle='Entrar' 
                       color='#31d57c'
-                      width={120}
-                      marginTop={25}
+                      width={134}
+                      marginTop={24}
                       marginBottom={12}
                       onPress={login}
                 />
@@ -66,24 +61,32 @@ export default function Login(){
                       marginBottom={16}
                 />
                 <View style={styles.boxIcons}>
-                  <Image source={FaceIcon} style={styles.imgIcon}/>
-                  <Image source={GoogleIcon} style={styles.imgIcon}/>
-                  <Image source={LinkedinIcon} style={styles.imgIcon}/>
+                  <TouchableOpacity>
+                    <Image source={FaceIcon} style={styles.imgIcon}/>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
+                    <Image source={GoogleIcon} style={styles.imgIcon}/>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
+                    <Image source={LinkedinIcon} style={styles.imgIcon}/>
+                  </TouchableOpacity>
                 </View>
-
-                <View style={styles.boxRegister}>
-                  <Text style={styles.registerText}>Nova?{'\n'} Crie sua conta gratuitamente</Text>
-                  <Botao tittle='Cadastrar' 
-                        color='#31d57c'
-                        width={120}
-                        onPress={handleNavigateToRegisterDetails}
-                  />
-                </View>
+              </KeyboardAvoidingView>
+            
+              <View style={styles.boxRegister}>
+                <Text style={styles.registerText}>Nova?{'\n'}Crie sua conta gratuitamente</Text>
+                <Botao tittle='Cadastrar' 
+                      color='#31d57c'
+                      width={134}
+                      onPress={handleNavigateToRegisterDetails}
+                />
               </View>
-          </ImageBackground>
-        </View>
-      </SafeAreaView>
-    );
+            </View>
+            
+        </ImageBackground>
+      </View>
+    </SafeAreaView>
+  )
 }
 
 const styles = StyleSheet.create({
@@ -92,7 +95,6 @@ const styles = StyleSheet.create({
     },
     backngroundPrimary:{
       flex:1,
-      backgroundColor:'#F3F0E8',
     },
     brackgroundSub:{
         flex: 1,
@@ -104,11 +106,15 @@ const styles = StyleSheet.create({
     content:{
       alignItems:'center',
     },
+    contentLogin:{
+      alignItems:'center',
+      position:'relative',
+      bottom:40,
+    },
     logo:{
-      width:164,
-      height:48,
-      marginBottom:45,
-
+      width:147,
+      height:42,
+      marginBottom:35,
     },
     inputBox:{
       width:250,
@@ -116,10 +122,13 @@ const styles = StyleSheet.create({
     },
     boxIcons:{
       flexDirection:'row',
+      alignItems:'center',
+      justifyContent:'center',
+      width:141,
     },
     imgIcon:{
-      width:50,
-      height:50,
+      width:39,
+      height:39,
       marginRight:11,
     },
     boxRegister:{
@@ -130,7 +139,7 @@ const styles = StyleSheet.create({
     registerText:{
       color:'#fff',
       textAlign:'center',
-      marginBottom:25,
+      marginBottom:27,
     },
 
 });

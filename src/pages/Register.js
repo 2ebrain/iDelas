@@ -1,5 +1,7 @@
 import React from 'react'
-import  {View, StyleSheet, ImageBackground, Image} from 'react-native'
+import  {View, StyleSheet, 
+               ImageBackground, Image,
+               KeyboardAvoidingView } from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import BrackgroundSub from '../assets/circuitos_.png'
@@ -7,7 +9,6 @@ import Logo from  '../assets/Logo_iDelas.png'
 
 import Input from '../components/Input'
 import InputPassword from '../components/PasswordInput'
-
 import Botao from '../components/Button'
 
 export default function Register(){
@@ -20,7 +21,8 @@ export default function Register(){
       <View style={styles.container}>
         <View style={styles.backngroundPrimary}>
           <ImageBackground source={BrackgroundSub} style={styles.brackgroundSub}>
-              <View style={styles.content}>
+              <KeyboardAvoidingView style={styles.content}
+                                    behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.inputBox}>
                     <Input placeholder='Seu nome' 
@@ -41,7 +43,7 @@ export default function Register(){
                       marginTop={85}
                       onPress={handleNavigateToConfirmerDetails}
                 />
-              </View>
+              </KeyboardAvoidingView>
           </ImageBackground>
         </View>
       </View>
@@ -68,9 +70,9 @@ const styles = StyleSheet.create({
       justifyContent:'space-between',
     },
     logo:{
-      width:164,
-      height:48,
-      marginBottom:45,
+      width:147,
+      height:42,
+      marginBottom:36,
 
     },
     inputBox:{
