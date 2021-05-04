@@ -18,6 +18,7 @@ export default StyleSheet.create({
   },
   textRelatorios:{
     fontSize:12,
+    fontFamily:'gotham-medium',
     color:'#fff',
     marginLeft:10,
   },

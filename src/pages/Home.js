@@ -3,8 +3,7 @@ import { StyleSheet,
          SafeAreaView, 
          Text, 
          ScrollView, 
-         View, 
-         StatusBar,
+         View,
         Image,
       TouchableOpacity } from 'react-native'
 
@@ -14,6 +13,8 @@ import { useNavigation } from '@react-navigation/core'
 import ButtonCard from '../components/ButtonCard'
 import ButtonRow from '../components/ButtonRow'
 import Header from '../components/Header'
+import HeaderMenu from '../components/HeaderMenuPrimary'
+
 
 //importes dos icones usados na view
 import iconDollar from '../assets/icons/dollar-coin.png'
@@ -39,18 +40,18 @@ export default function Home(){
   
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar />
       <ScrollView>  
         <View style={styles.content}>
+          {/* Cabeçalho da View */}
+          <HeaderMenu/>
           <Header nickName='Renata Mendes' source={AvatarHome}/>
-
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
                 <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text>R$ 24.643,00</Text>
+                <Text style={styles.textCash}>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
@@ -71,7 +72,7 @@ export default function Home(){
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
                 <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text>R$ 55.265,00</Text>
+                <Text style={styles.textCash}>R$ 55.265,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
@@ -94,7 +95,7 @@ export default function Home(){
             <View style={styles.contentBox}>
               <View style={styles.accountSaldo}>
                 <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text>R$ 24.643,00</Text>
+                <Text style={styles.textCash}>R$ 24.643,00</Text>
               </View>
               <View style={styles.iconsContainer}>
                 <TouchableOpacity>
@@ -111,6 +112,38 @@ export default function Home(){
               </View>
             </View>
           </View>
+
+          {/* <View style={styles.sectionBox}>
+            <Text style={styles.tittleText}>Resultado Financeiro</Text>
+
+            <View style={styles.contentBox}>
+              <View style={styles.headerBox}>
+                <View style={styles.accountSaldo}>
+                  <Image source={iconDollar} style={{ width: 27, height: 21 }} />
+                  <Text style={styles.textCash}>R$ 24.643,00</Text>
+                </View>
+                <View style={styles.iconsContainer}>
+                  <TouchableOpacity>
+                    <Image source={iconEye} style={{ width: 18, height: 13 }} />
+                  </TouchableOpacity>
+                  <TouchableOpacity
+                    onPress={() => navigation.navigate("Detalhes")}
+                  >
+                    <Image
+                      source={iconArrowBottom}
+                      style={{ width: 15, height: 13 }}
+                    />
+                  </TouchableOpacity>
+                </View>
+              </View>
+              
+
+            <View>
+                <Text>Conta Corrente</Text>
+            </View>
+            </View>
+          </View> */}
+
 
           {/* Seção de Botões Card*/}
           <View style={styles.botoesContainer}>
@@ -337,9 +370,15 @@ const styles = StyleSheet.create({
     flexDirection:'row',
     width:321,
     height:40,
-    elevation:8,
+    elevation:3,
     backgroundColor:'#fff',
     borderRadius:10,
+    justifyContent:'space-between',
+    alignItems:'center',
+  },
+  headerBox:{
+    width:'100%',
+    flexDirection:'row',
     justifyContent:'space-between',
     alignItems:'center',
   },
@@ -350,6 +389,12 @@ const styles = StyleSheet.create({
     justifyContent:'space-between',
     marginLeft:10,
   },
+  textCash:{
+    fontSize:12,
+    fontFamily:'gotham-medium',
+    color:'#777777',
+    marginLeft:12,
+  },
   iconsContainer:{
     flexDirection:'row',
     width:40,
@@ -357,6 +402,8 @@ const styles = StyleSheet.create({
     marginRight:10,
   },
   tittleText:{
+    fontSize:14,
+    fontFamily:'gotham-book',
     marginBottom:10,
   },
   // Seção de botoes

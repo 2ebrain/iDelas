@@ -22,9 +22,9 @@ export default function Confirmation(){
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.textBox}>
                     <Text style={styles.text}>
-                      Falta pouco! Confirme seu endereço{'\n'} 
-                      de e-mail para começar a resolver a{'\n'} 
-                      gestão financeira{'\n'}de seu negócio. 
+                      Falta pouco! Confirme seu{'\n'} 
+                      endereço de e-mail para começar a{'\n'}
+                      resolver a gestão financeira{'\n'}de seu negócio. 
                     </Text>
                 </View>
                 <Image source={Mascot}
@@ -33,6 +33,7 @@ export default function Confirmation(){
                 <View style={styles.resendBox}>
                     <Link size={15}
                         tittle='Não recebeu?'
+                        fontFamily='gotham-medium'
                     />
                     <Botao tittle='Reenviar e-mail' 
                         color='#31d57c'
@@ -49,7 +50,7 @@ export default function Confirmation(){
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
+        flex:1, 
     },
     backngroundPrimary:{
       width:'100%',
@@ -73,10 +74,11 @@ const styles = StyleSheet.create({
     },
     text:{
         fontSize:18,
+        fontFamily:'gotham-book',
         width:'90%',
         textAlign:'center',
         color:'#fff',
-        lineHeight:21,
+        lineHeight:19,
     },
     mascot:{
         width:116,

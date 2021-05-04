@@ -6,43 +6,17 @@ import BarraPoorcentagem from '../Barraprogrs'
 
 import {Text, View, TouchableOpacity, Image} from 'react-native'
 
-import buttonSing from '../../assets/icons/icon-sino.png'
-
-import ArrowLif from '../../assets/icons/icon-back.png'
-import Interrogacao from '../../assets/icons/icon-interrogacao.png'
-
 
 import Styles from './style'
 
 export default function (props){
   const navigation = useNavigation();
   return(  
-      <>
-      <View style={Styles.header}>
-
-        <TouchableOpacity
-          onPress={() => {
-            navigation.goBack();
-          }}
-        >
-          <Image source={ArrowLif} style={{ width: 50, height: 16 }} />
-        </TouchableOpacity>
-
-        <View style={Styles.headerContent}>
-          <TouchableOpacity>
-            <Image source={Interrogacao} style={{ width: 15, height: 25 }} />
-          </TouchableOpacity>
-
-          <TouchableOpacity>
-            <Image source={buttonSing} style={{ width: 20, height: 22 }} />
-          </TouchableOpacity>
-        </View>
-
-      </View>
-
-    
+      <>    
       <View style={Styles.perfilContainer}>
-        <Image source={props.source} style={Styles.avatarHome} />
+        <TouchableOpacity>
+          <Image source={props.source} style={Styles.avatarHome}/>
+        </TouchableOpacity>
 
         <View style={Styles.infoContainer}>
 

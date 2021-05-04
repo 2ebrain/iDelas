@@ -3,9 +3,10 @@ import React from 'react'
 import { Text, StyleSheet} from 'react-native'
 
 
-export default ({onPress, tittle, size,marginBottom}) => (
+export default ({onPress, tittle, size, marginBottom, fontFamily}) => (
     <Text style={[styles.link,{fontSize:size},
-    {marginBottom: marginBottom}
+    {marginBottom: marginBottom},
+    {fontFamily: fontFamily}
     ]} onPress={onPress}>
         {tittle}</Text>
     )

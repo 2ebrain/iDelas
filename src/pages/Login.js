@@ -19,6 +19,8 @@ import Link from '../components/Link'
 import Botao from '../components/Button'
 
 export default function Login(){
+  
+
   const navigation = useNavigation()
 
   function handleNavigateToRegisterDetails(){
@@ -48,6 +50,7 @@ export default function Login(){
                 </View>
                 <Link tittle='Esqueci a senha'
                       size={12}
+                      fontFamily='gotham-medium'
                 />
                 <Botao tittle='Entrar' 
                       color='#31d57c'
@@ -59,6 +62,7 @@ export default function Login(){
                 <Link tittle='Ou entre com:'
                       size={13}
                       marginBottom={16}
+                      fontFamily='gotham-book'
                 />
                 <View style={styles.boxIcons}>
                   <TouchableOpacity>
@@ -137,6 +141,8 @@ const styles = StyleSheet.create({
       top:'110%',
     },
     registerText:{
+      fontSize:13,
+      fontFamily:'gotham-medium',
       color:'#fff',
       textAlign:'center',
       marginBottom:27,

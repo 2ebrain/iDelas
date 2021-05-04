@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
     },
     buttonText:{
         fontSize: 15,
+        fontFamily:'gotham-bold',
         color:"#fff", 
-        fontWeight: "bold",
     },
 })

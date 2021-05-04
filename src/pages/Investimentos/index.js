@@ -19,6 +19,7 @@ import Styles from "./style"
 import IconPlusOrange from "../../assets/icons/icon-plus-circle-orange.png"
 
 import Header from "../../components/Header"
+import HeaderSecundary from '../../components/HeaderMenuSecundary'
 
 export default function () {
   const navigation = useNavigation();
@@ -26,6 +27,7 @@ export default function () {
     <SafeAreaView>
       <ScrollView>
         <View style={Styles.container}>
+          <HeaderSecundary/>
           <Header nickName="Renata Mendes" source={AvatarHome} />
           {/* Seção de saldo e escolhas das contas de banco */}
           <View style={Styles.content}>

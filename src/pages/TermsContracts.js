@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
-import  {View, StyleSheet, ImageBackground, Image, Text, CheckBox} from 'react-native'
+import  {View, StyleSheet, 
+      Image, Text, CheckBox} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
-import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
 import Botao from '../components/Button'
@@ -85,8 +85,8 @@ const styles = StyleSheet.create({
       justifyContent:'space-between',
     },
     logo:{
-      width:164,
-      height:48,
+      width:147,
+      height:39,
       marginBottom:30,
 
     },
@@ -94,10 +94,11 @@ const styles = StyleSheet.create({
         marginBottom:22,
     },
     text:{
-        width:345,
-        fontSize:18,
+        width:355,
+        fontSize:16,
+        fontFamily:'gotham-book',
         textAlign:'center',
-        marginHorizontal:41,
+        lineHeight:23,
         color:'#fff',
     },
     mascot:{
@@ -113,6 +114,9 @@ const styles = StyleSheet.create({
         flexDirection:'row',
     },
     label:{
+      fontSize:13,
+      fontFamily:'gotham-book',
+      lineHeight:20,
       color:'#fff',
     },
 

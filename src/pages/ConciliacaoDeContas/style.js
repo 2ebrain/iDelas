@@ -22,6 +22,7 @@ export default StyleSheet.create({
   },
   textTitulo:{
     fontSize:15,
+    fontFamily:'gotham-medium',
     color:'#691CC7',
   },
   contentAccount:{
@@ -49,11 +50,13 @@ export default StyleSheet.create({
     marginLeft:20,
   },
   textAcc:{
-    fontSize:11,
+    fontSize:9,
+    fontFamily:'gotham-medium',
     color:'#7C7C7C',
   },
   textBank:{
-    fontSize:14,
+    fontFamily:'gotham-medium',
+    fontSize:13,
     color:'#7C7C7C',
     marginBottom:5,
   },
@@ -61,11 +64,13 @@ export default StyleSheet.create({
     padding:5,
   },
   textSaldo:{
-    fontSize:10,
+    fontSize:9,
+    fontFamily:'gotham-medium',
     color:'#7C7C7C',
   },
   textMoney:{
     fontSize:13,
+    fontFamily:'gotham-medium',
     color:'#7C7C7C',
   },
   textTrans:{
@@ -76,7 +81,7 @@ export default StyleSheet.create({
     color:'#fff',
     fontSize:13,
     textAlign:'center',
-    elevation:3,
+    elevation:2,
     },
     // Botões flutuantes
     sectionButtons:{
@@ -100,6 +105,7 @@ export default StyleSheet.create({
     buttonText:{
       color:'#fff',
       fontSize:10,
+      fontFamily:'gotham-bold',
       textAlign:'left',
       paddingVertical:10
     },
@@ -144,7 +150,8 @@ export default StyleSheet.create({
     },
     tituloCard:{
       color:'#691CC7',
-      fontSize:15,
+      fontSize:9,
+      fontFamily:'gotham-medium',
     },
     arrowIcon:{
       width:15,
@@ -155,16 +162,19 @@ export default StyleSheet.create({
     },
     textCard:{
       color:'#8B8B8B',
-      fontSize:12,
+      fontSize:9,
+      fontFamily:'gotham-regular',
       lineHeight:16,
     },
     textAlertCard:{
-      width:'65%',
+      width:'50%',
       backgroundColor:'#C3C3C3',
       color:'#fff',
       borderRadius:50,
       marginTop:9,
-      fontSize:13,
+      padding:3,
+      fontSize:10,
+      fontFamily:'gotham-medium',
       textAlign:'center',
     },
     footerCard:{
@@ -176,7 +186,8 @@ export default StyleSheet.create({
       paddingVertical:15,
     },
     textCash:{
-       fontSize:15,
+       fontSize:10,
+       fontFamily:'gotham-medium',
        color:'#6D8E38',
     },
     boxIcons:{
@@ -199,11 +210,13 @@ export default StyleSheet.create({
     },
     textSaldoFinal:{
       color:'#7C7C7C',
-      fontSize:11,
+      fontSize:9,
+      fontFamily:'gotham-medium',
     },
     textCashFinal:{
       color:'#7C7C7C',
-      fontSize:14,
+      fontSize:13,
+      fontFamily:'gotham-medium',
     },
     
 })

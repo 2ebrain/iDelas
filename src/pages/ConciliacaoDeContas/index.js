@@ -1,9 +1,9 @@
-import React from "react";
-import { useNavigation } from "@react-navigation/core";
+import React from "react"
+import { useNavigation } from "@react-navigation/core"
 
-import AvatarHome from "../../assets/icon-avatar-home.png";
+import AvatarHome from "../../assets/icon-avatar-home.png"
 
-import IconPlusCircle from "../../assets/icons/icon-plus-circle-white.png";
+import IconPlusCircle from "../../assets/icons/icon-plus-circle-white.png"
 
 import {
   SafeAreaView,
@@ -12,18 +12,19 @@ import {
   TouchableOpacity,
   Image,
   ScrollView,
-} from "react-native";
-import Styles from "./style";
+} from "react-native"
+import Styles from "./style"
 
-import ArrowIcon from "../../assets/icons/icon-arrow-bottom.png";
-import DownloadIcon from "../../assets/icons/icon-download.png";
-import ConfigIcon from "../../assets/icons/icon-toggle-config.png";
-import IconArrowTop from "../../assets/icons/icon-arrow-top.png";
-import checkIcon from "../../assets/icons/icon-check.png";
-import EditIcon from "../../assets/icons/icon-edit.png";
-import ThrasIcon from "../../assets/icons/icon-delet-thrash.png";
+import ArrowIcon from "../../assets/icons/icon-arrow-bottom.png"
+import DownloadIcon from "../../assets/icons/icon-download.png"
+import ConfigIcon from "../../assets/icons/icon-toggle-config.png"
+import IconArrowTop from "../../assets/icons/icon-arrow-top.png"
+import checkIcon from "../../assets/icons/icon-check.png"
+import EditIcon from "../../assets/icons/icon-edit.png"
+import ThrasIcon from "../../assets/icons/icon-delet-thrash.png"
 
-import Header from "../../components/Header";
+import Header from "../../components/Header"
+import HeaderSecundary from '../../components/HeaderMenuSecundary'
 
 export default function () {
   const navigation = useNavigation();
@@ -31,6 +32,7 @@ export default function () {
     <SafeAreaView>
       <ScrollView>
         <View style={Styles.container}>
+          <HeaderSecundary/>
           <Header nickName="Renata Mendes" source={AvatarHome} />
           {/* Seção de saldo e escolhas das contas de banco */}
           <View style={Styles.content}>

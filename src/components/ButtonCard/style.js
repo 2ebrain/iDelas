@@ -10,7 +10,14 @@ export default StyleSheet.create({
     height:115,
     marginBottom:20,
   },
+  iconButton:{
+    marginBottom:6,
+  },
   textBotao:{
+    width:78,
+    fontSize:11,
+    lineHeight:12,
+    fontFamily:'gotham-medium',
     color:'#691CC7',
     textAlign:'center',
   },

@@ -8,7 +8,6 @@ import { StyleSheet,
 import {FontAwesome5} from '@expo/vector-icons'
 
 
-
 import { useNavigation} from '@react-navigation/core'
 
 export default function Detalhes(){
@@ -52,7 +51,7 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Entradas Não Operacionais</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -66,7 +65,7 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Entradas Financeiras</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -80,7 +79,7 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Saídas com Seres Humanos</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -94,7 +93,8 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Saídas 
+Regulares</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -108,7 +108,8 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Saídas 
+Eventuais</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -122,7 +123,22 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Saídas 
+Ligadas às vendas</Text>
+              </View>
+              <View style={styles.boxMountante}>
+                <Text style={styles.textValor}>R$ 2.437,31</Text>
+              </View>
+              <View style={styles.boxPorcertn}>
+                <Text style={styles.textPorcen}>0,0%</Text>
+                <TouchableOpacity>
+                  <FontAwesome5 name='chevron-down'/>
+                </TouchableOpacity>
+              </View>
+            </View>
+            <View style={styles.boxInput}>
+              <View>
+                <Text style={styles.textInitial}>Investimentos</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -136,21 +152,7 @@ export default function Detalhes(){
             </View>
             <View style={styles.boxInput}>
               <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
-              </View>
-              <View style={styles.boxMountante}>
-                <Text style={styles.textValor}>-</Text>
-              </View>
-              <View style={styles.boxPorcertn}>
-                <Text style={styles.textPorcen}>0,0%</Text>
-                <TouchableOpacity>
-                  <FontAwesome5 name='chevron-down'/>
-                </TouchableOpacity>
-              </View>
-            </View>
-            <View style={styles.boxInput}>
-              <View>
-                <Text style={styles.textInitial}>Entradas Operacionais</Text>
+                <Text style={styles.textInitial}>Lucratividade</Text>
               </View>
               <View style={styles.boxMountante}>
                 <Text style={styles.textValor}>-</Text>
@@ -219,7 +221,7 @@ const styles = StyleSheet.create({
   closeText:{
     color:'#fff',
     fontSize:11,
-    fontWeight:'bold',
+    fontFamily:'gotham-medium',
   },
   contentBox:{
     width:'90%',
@@ -232,6 +234,7 @@ const styles = StyleSheet.create({
   textDetails:{
     color:'#fff',
     fontSize:15,
+    fontFamily:'gotham-bold',
     marginBottom:10,
   },
   boxWhite:{
@@ -284,4 +287,12 @@ const styles = StyleSheet.create({
     borderRadius:10,
     marginBottom:10,
   },
-});
+  textInitial:{
+    width:115,
+  },
+  textValor:{
+    
+    alignItems:'center',
+    justifyContent:'center',
+  },
+})

@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
         paddingVertical:15,
         paddingHorizontal:23,
         fontSize:12,
+        fontFamily:'gotham-book',
         justifyContent:'center',
         alignItems:'center',
         borderRadius:50,

@@ -49,6 +49,7 @@ export default StyleSheet.create({
  
   },
   nameAvatar:{
+    fontFamily:'gotham-light',
     fontSize:15,
     marginBottom:10,
   },
