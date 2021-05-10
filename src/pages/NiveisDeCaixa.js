@@ -4,68 +4,27 @@ import { StyleSheet,
          Text, 
          ScrollView, 
          View, 
-         StatusBar,
-        Image,
-        TouchableOpacity } from 'react-native'
+         TouchableOpacity } from 'react-native'
 
 import AvatarHome from '../assets/icon-avatar-home.png'
 
-import { useNavigation } from '@react-navigation/core'
+import Header from '../components/Header'
+import HeaderMenu from '../components/HeaderMenuSecundary'
 
-import { FontAwesome5 } from '@expo/vector-icons'
+import { useNavigation } from '@react-navigation/core'
 
 export default function Home(){
   const navigate = useNavigation();
   return (
     <SafeAreaView style={styles.container}>
-      <StatusBar />
-
       <ScrollView>
         <View style={styles.content}>
           {/** Seção do Header*/}
           <View style={styles.header}>
-            <View style={styles.headerMenu}>
-              <TouchableOpacity onPress={() => navigate.goBack()}>
-                <FontAwesome5 name="chevron-left" size={25} />
-              </TouchableOpacity>
-              <Text>Voltar</Text>
-            </View>
-
-            <View style={styles.headerContent}>
-              <TouchableOpacity>
-                <FontAwesome5 name="question" size={25} />
-              </TouchableOpacity>
-              <TouchableOpacity>
-                <FontAwesome5 name="bell" size={25} />
-              </TouchableOpacity>
-            </View>
+            <HeaderMenu/>
+            <Header nickName='Renata Mendes' source={AvatarHome}/>
           </View>
 
-          {/* Seção de perfil */}
-          <View style={styles.perfilContainer}>
-            <Image source={AvatarHome} style={styles.avatarHome} />
-            <View style={styles.infoContainer}>
-              <Text style={styles.nameAvatar}>Renata Mendes</Text>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorder}>
-                  <View style={styles.barraProgress}></View>
-                </View>
-                <Text style={styles.progressText}>NIVEL 1</Text>
-              </View>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorderBlack}>
-                  <View style={styles.barraProgressBlack}></View>
-                </View>
-                <Text style={styles.progressTextBlack}>50 PTS</Text>
-              </View>
-              <View style={styles.progressContainer}>
-                <View style={styles.barraBorderGreen}>
-                  <View style={styles.barraProgressGreen}></View>
-                </View>
-                <Text style={styles.progressTextGreen}>RF</Text>
-              </View>
-            </View>
-          </View>
 
           {/*section moutant*/}
           <View style={styles.accountContainer}>
@@ -158,22 +117,13 @@ const styles = StyleSheet.create({
   },
   header:{
     width:'100%',
-    flexDirection:'row',
     alignItems:'center',
-    justifyContent:'space-between',
-    padding:25,
   },
   headerMenu:{
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'space-between', 
     width:65,
-  },
-  headerContent:{
-    flexDirection:'row',
-    width:55,
-    alignItems:'center',
-    justifyContent:'space-between',
   },
   realidBox:{
     width:100,
@@ -346,9 +296,10 @@ const styles = StyleSheet.create({
     width:80,
   },
   columContainerTri:{
-    width:150,
+    width:'100%',
     height:350,
     justifyContent:'space-between',
+    alignItems:'center',
   },
   boxTableShiel:{ 
     height:90,
@@ -358,7 +309,7 @@ const styles = StyleSheet.create({
     height:30,
   },
   inputText:{
-    width:'100%',
+    width:210,
     fontSize:11,
     backgroundColor:'#691CC7',
     color:'#fff',
