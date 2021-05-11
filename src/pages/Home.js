@@ -26,7 +26,13 @@ import IconSocios from '../assets/icons/icon-socios.png'
 import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
 import IconConciliacaoContas from '../assets/icons/icon-carteira.png'
 import IconSaidas from '../assets/icons/icon-saidas.png'
-import IconCobranca from '../assets/icons/icon-cobrancas.png'
+
+// import IconCobranca from '../assets/icons/icon-cobrancas.png'
+
+import IconCobrancas from '../components/Svg'
+
+import IconTTT from '../assets/images/svg/Saidas.svg'
+
 import IconEntradas from '../assets/icons/icon-entradas.png'
 import AvatarHome from '../assets/icon-avatar-home.png'
 import AvatarProfile from '../assets/avatar-profile.png'
@@ -36,7 +42,7 @@ import CardMap from '../assets/map-image.png'
 import GirlStudy from '../assets/university-girl.png'
 
 export default function Home(){
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   
   return (
     <SafeAreaView style={styles.container}>
@@ -142,8 +148,7 @@ export default function Home(){
                 <Text>Conta Corrente</Text>
             </View>
             </View>
-          </View> */}
-
+          </View> */} 
 
           {/* Seção de Botões Card*/}
           <View style={styles.botoesContainer}>
@@ -166,17 +171,20 @@ export default function Home(){
               borderBottomLeftRadius={15}
               width={53}
               height={39}
-            />
+            >
+            </ButtonCard>
+             
+        
             <ButtonCard
               tituloButon="Cobranças Pendentes"
               onPress={()=>{navigation.navigate('TestView')}}
-              source={IconCobranca}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
               borderTopRightRadius={15}
-              width={67}
-              height={40}
-            />
+            >
+              <IconCobrancas/>
+            </ButtonCard>
+
             <ButtonCard
               tituloButon="Entradas"
               onPress={()=>{navigation.navigate('Entradas')}}
