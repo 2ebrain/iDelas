@@ -1,16 +1,10 @@
-import React from 'react'
+import React, { Component } from 'react'
 import  {SafeAreaView, View, 
                       StyleSheet, 
                       ImageBackground, 
                       Image, Text, TouchableOpacity, 
-                      KeyboardAvoidingView} from 'react-native'
-import { useNavigation } from '@react-navigation/core'
-<<<<<<< Updated upstream
-=======
-
+                      KeyboardAvoidingView, Alert, ActivityIndicator} from 'react-native'
 import firebase from './database/firebase';
->>>>>>> Stashed changes
-
 
 import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
@@ -20,62 +14,59 @@ import GoogleIcon from '../assets/icons/icon-google.png'
 import LinkedinIcon from '../assets/icons/icon-linkedin.png'
 
 import Input from '../components/Input'
-import InputPassword from '../components/PasswordInput'
 import Link from '../components/Link'
 import Botao from '../components/Button'
 
-export default function Login(){
+export default class Login extends Component {
   
-
-  const navigation = useNavigation()
-
-<<<<<<< Updated upstream
-  function handleNavigateToRegisterDetails(){
-    navigation.navigate('Register')
+  constructor() {
+    super();
+    this.state = { 
+      email: '', 
+      password: '',
+      isLoading: false
+    }
   }
-  function login(){
-    navigation.navigate('Home')
-=======
+
+  updateInputVal = (val, prop) => {
+    const state = this.state;
+    state[prop] = val;
+    this.setState(state);
+  }
+
   userLogin = () => {
-    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
-    .then((userCredential) => {
-      var user = userCredential.user;
-    })
-    .catch(function(error) {
-    // Handle Errors here.
-    var errorCode = error.code;
-    var errorMessage = error.message;
-    if (errorCode === 'auth/wrong-password') {
-      alert('Email ou senha incorreta! tente novamente.');
-    } else if (errorCode === 'auth/invalid-email') {
-      alert('Email ou senha incorreta! tente novamente.'); 
+    if(this.state.email === '' || this.state.password === '') {
+      Alert.alert('Email ou senha incorreta!')
     }
-    if (errorCode === 'auth/user-not-found'){
-      alert('Usuario nao encontrado. Tente novamente');
-    }
-    /*else if (errorCode === 'auth-user-not-found') {
-      alert('Email não cadastrado.');
-    }*/
-    console.log(error);
-    })
-   
-    firebase
-    .auth()
-    .signInWithEmailAndPassword(this.state.email, this.state.password)
-    .then((res) => {
-      console.log(res)
-      console.log('User logged-in successfully!')
+    else {
       this.setState({
-        isLoading: false,
-        email: '', 
-        password: ''
+        isLoading: true,
       })
-      this.props.navigation.navigate('Home')
-    })
-    .catch(error => this.setState({ errorMessage: error.message }))
-    
->>>>>>> Stashed changes
+      firebase
+      .auth()
+      .signInWithEmailAndPassword(this.state.email, this.state.password)
+      .then((res) => {
+        console.log(res)
+        console.log('User logged-in successfully!')
+        this.setState({
+          isLoading: false,
+          email: '', 
+          password: ''
+        })
+        this.props.navigation.navigate('Home')
+      })
+      .catch(error => this.setState({ errorMessage: error.message }))
+    }
   }
+
+  render() {
+    if(this.state.isLoading){
+      return(
+        <View style={styles.preloader}>
+          <ActivityIndicator size="large" color="#9E9E9E"/>
+        </View>
+      )
+    }
 
   return(
     <SafeAreaView style={styles.container}>
@@ -86,14 +77,25 @@ export default function Login(){
                                     behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.inputBox}>
-                    <Input placeholder='E-mail ou Usuário' 
+                  
+                    <Input
+                          placeholder="Email"
                           colorBorder='#FFFFFF' 
-                          backgroundColor='#751DCB'
-                          textContentType='emailAddress'
                           width={250}
-                          keyboardType='email-address'
+                          value={this.state.email}
+                          onChangeText={(val) => this.updateInputVal(val, 'email')}
                     />
-                    <InputPassword/>
+                    
+                    <Input
+                          style={styles.inputStyle}
+                          placeholder="Password"
+                          colorBorder='#FFFFFF' 
+                          width={250}
+                          value={this.state.password}
+                          onChangeText={(val) => this.updateInputVal(val, 'password')}
+                          maxLength={15}
+                          secureTextEntry={true}
+                    />   
                 </View>
                 <Link tittle='Esqueci a senha'
                       size={12}
@@ -104,7 +106,7 @@ export default function Login(){
                       width={134}
                       marginTop={24}
                       marginBottom={12}
-                      onPress={login}
+                      onPress={() =>  this.userLogin()}
                 />
                 <Link tittle='Ou entre com:'
                       size={13}
@@ -129,7 +131,7 @@ export default function Login(){
                 <Botao tittle='Cadastrar' 
                       color='#31d57c'
                       width={134}
-                      onPress={handleNavigateToRegisterDetails}
+                      onPress={() => this.props.navigation.navigate('Register')}
                 />
               </View>
             </View>
@@ -139,7 +141,7 @@ export default function Login(){
     </SafeAreaView>
   )
 }
-
+}
 const styles = StyleSheet.create({
     container:{
         flex:1,

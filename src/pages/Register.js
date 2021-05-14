@@ -1,36 +1,10 @@
-<<<<<<< Updated upstream
-import React from 'react'
-import  {View, StyleSheet, 
-               ImageBackground, Image,
-               KeyboardAvoidingView } from 'react-native'
-import { useNavigation } from '@react-navigation/core'
-
-import BrackgroundSub from '../assets/circuitos_.png'
-import Logo from  '../assets/Logo_iDelas.png'
-
-import Input from '../components/Input'
-import InputPassword from '../components/PasswordInput'
-import Botao from '../components/Button'
-
-export default function Register(){
-  const navigation = useNavigation();
-
-  function handleNavigateToConfirmerDetails(){
-    navigation.navigate('Confirmation');
-=======
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, ImageBackground, Image } from 'react-native';
-
 import firebase from './database/firebase';
-import {db} from './database/firebase.js';
-
 import BackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
-import Input from '../components/Input'
-import Botao from '../components/Button'
 export default class Signup extends Component {
-  
   constructor() {
     super();
     this.state = { 
@@ -95,41 +69,15 @@ export default class Signup extends Component {
       }*/
       console.log(error);
       })
-   
-    
->>>>>>> Stagit shed changes
-  }
-    return(
-      <View style={styles.container}>
-        <View style={styles.backngroundPrimary}>
-          <ImageBackground source={BrackgroundSub} style={styles.brackgroundSub}>
-              <KeyboardAvoidingView style={styles.content}
-                                    behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
-                <Image source={Logo} style={styles.logo}/>
-                <View style={styles.inputBox}>
-                    <Input placeholder='Seu nome' 
-                          colorBorder='#fff' 
-                          textContentType='emailAddress'
-                          width={250}
-                          autoFocus={true}
-                    />
-                    <Input placeholder='Digite um e-mail válido' 
-                          colorBorder='#fff' 
-                          width={250}
-                    />
-                    <InputPassword/>
-                </View>
-                <Botao tittle='Quero me cadastrar' 
-                      color='#31d57c'
-                      width={250}
-                      marginTop={85}
-                      onPress={handleNavigateToConfirmerDetails}
-                />
-              </KeyboardAvoidingView>
-          </ImageBackground>
+    }
+
+  render() {
+    if(this.state.isLoading){
+      return(
+        
+        <View style={styles.preloader}>
+          <ActivityIndicator size="large" color="#9E9E9E"/>
         </View>
-<<<<<<< Updated upstream
-=======
       )
     }    
     return (
@@ -137,29 +85,28 @@ export default class Signup extends Component {
        <ImageBackground source={BackgroundSub} style={styles.backgroundSub}>
        <Image source={Logo} style={styles.logo}/>
        
-        <Input
-          
+        <TextInput
+          style={styles.inputStyle}
           placeholder="Nome"
-          colorBorder='#FFFFFF' 
           placeholderTextColor='#FFFF'
           backgroundColor='#751DCB'
           width={250}
           value={this.state.displayName}
           onChangeText={(val) => this.updateInputVal(val, 'displayName')}
         />      
-        <Input
+        <TextInput
+          style={styles.inputStyle}
+          
           placeholder="Email"
-          colorBorder='#FFFFFF' 
           placeholderTextColor='#FFFF'
           backgroundColor='#751DCB'
           width={250}
           value={this.state.email}
           onChangeText={(val) => this.updateInputVal(val, 'email')}
         />
-        <Input
-          
+        <TextInput
+          style={styles.inputStyle}
           placeholder="Senha"
-          colorBorder='#FFFFFF' 
           placeholderTextColor='#FFFF'
           backgroundColor='#751DCB'
           width={250}
@@ -168,7 +115,7 @@ export default class Signup extends Component {
           maxLength={15}
           secureTextEntry={true}
         />   
-        <Botao tittle ='Registrar'
+        <Button
           color="#31d57c"
           width={134}
           marginTop={24}
@@ -183,9 +130,9 @@ export default class Signup extends Component {
           Já tem conta? Clique aqui para entrar
         </Text>  
         </ImageBackground>                        
->>>>>>> Stashed changes
       </View>
     );
+  }
 }
 
 const styles = StyleSheet.create({
@@ -196,7 +143,7 @@ const styles = StyleSheet.create({
       flex:1,
       backgroundColor:'#F3F0E8',
     },
-    brackgroundSub:{
+    backgroundSub:{
         flex: 1,
         resizeMode: 'cover',
         backgroundColor:'#751dcb',
@@ -217,4 +164,27 @@ const styles = StyleSheet.create({
       width:250,
       height:96,
     },
+    inputStyle: {
+      width: '100%',
+      marginBottom: 15,
+      paddingBottom: 15,
+      alignSelf: "center",
+      borderColor: "#FFFFFF",
+      borderBottomWidth: 1
+    },
+    loginText: {
+      color: '#ffffff',
+      marginTop: 25,
+      textAlign: 'center'
+    },
+    preloader: {
+      left: 0,
+      right: 0,
+      top: 0,
+      bottom: 0,
+      position: 'absolute',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#fff'
+    }
 });
