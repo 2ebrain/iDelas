@@ -2,8 +2,6 @@ import React from 'react'
 import {Image, 
         Text, TouchableOpacity} from 'react-native'
 
-import IconCobrancas from '../../components/Svg'
-
 import Style from './style'
 
 // Componente de ButtonCard, ele recebe propriedades do componente pai
