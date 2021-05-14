@@ -35,13 +35,6 @@ export default class Login extends Component {
   }
 
   userLogin = () => {
-    if(this.state.email === '' || this.state.password === '') {
-      Alert.alert('Email ou senha incorreta!')
-    }
-    else {
-      this.setState({
-        isLoading: true,
-      })
       firebase
       .auth()
       .signInWithEmailAndPassword(this.state.email, this.state.password)
@@ -55,9 +48,22 @@ export default class Login extends Component {
         })
         this.props.navigation.navigate('Home')
       })
-      .catch(error => this.setState({ errorMessage: error.message }))
+      .catch(function(error) {
+        // Handle Errors here.
+        var errorCode = error.code;
+        var errorMessage = error.message;
+        if (errorCode === 'auth/wrong-password') {
+          alert('Email ou senha incorreta! tente novamente.');
+        } else if (errorCode === 'auth/invalid-email') {
+          alert('Email invalido. Tente novamente');
+        }
+        else if (errorCode === 'auth-user-not-found') {
+          alert('Email não cadastrado.');
+        }
+        console.log(error);
+        });
     }
-  }
+  
 
   render() {
     if(this.state.isLoading){

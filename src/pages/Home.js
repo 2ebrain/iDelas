@@ -29,7 +29,7 @@ import IconSaidas from '../assets/icons/icon-saidas.png'
 
 // import IconCobranca from '../assets/icons/icon-cobrancas.png'
 
-import IconCobrancas from '../components/Svg'
+//import IconCobrancas from '../components/Svg'
 
 import IconTTT from '../assets/images/svg/Saidas.svg'
 
@@ -50,7 +50,7 @@ export default function Home(){
         <View style={styles.content}>
           {/* Cabeçalho da View */}
           <HeaderMenu/>
-          <Header nickName='displayName' source={AvatarHome}/>
+          <Header nickName='Renata Mendes' source={AvatarHome}/>
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
@@ -182,7 +182,7 @@ export default function Home(){
               borderBottomEndRadius={15}
               borderTopRightRadius={15}
             >
-              <IconCobrancas/>
+             
             </ButtonCard>
 
             <ButtonCard

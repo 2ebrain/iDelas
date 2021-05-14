@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, ImageBackground, Image } from 'react-native';
-import firebase from './database/firebase';
+import firebase from './database/firebase.js';
 import BackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
