@@ -97,7 +97,7 @@ export default class Signup extends Component {
       })
    
     
->>>>>>> Stashed changes
+>>>>>>> Stagit shed changes
   }
     return(
       <View style={styles.container}>
