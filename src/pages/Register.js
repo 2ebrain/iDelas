@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 import React from 'react'
 import  {View, StyleSheet, 
                ImageBackground, Image,
@@ -16,6 +17,87 @@ export default function Register(){
 
   function handleNavigateToConfirmerDetails(){
     navigation.navigate('Confirmation');
+=======
+import React, { Component } from 'react';
+import { StyleSheet, Text, View, TextInput, Button, Alert, ActivityIndicator, ImageBackground, Image } from 'react-native';
+
+import firebase from './database/firebase';
+import {db} from './database/firebase.js';
+
+import BackgroundSub from '../assets/circuitos_.png'
+import Logo from  '../assets/Logo_iDelas.png'
+
+import Input from '../components/Input'
+import Botao from '../components/Button'
+export default class Signup extends Component {
+  
+  constructor() {
+    super();
+    this.state = { 
+      displayName: '',
+      email: '', 
+      password: '',
+      isLoading: false
+    }
+  }
+  updateInputVal = (val, prop) => {
+    const state = this.state;
+    state[prop] = val;
+    this.setState(state);
+  }
+
+  registerUser = () => {
+    firebase
+    .auth()
+    .createUserWithEmailAndPassword(this.state.email, this.state.password)
+    .then((user) => {
+     // var user = res.user;
+     
+      console.log('User registered successfully!')
+      if (firebase.auth().currentUser) {
+        userId = firebase.auth().currentUser.uid;
+        if (userId) {
+            firebase.database().ref('users/' + userId).set({
+              name:this.state.displayName,
+              email:this.state.email,
+             // password:password,
+             // uid:this.userId,
+              status:true,
+              online:true
+            })
+        }
+      }
+      this.setState({
+        isLoading: false,
+        displayName: '',
+        email: '', 
+        password: ''
+      })
+      this.props.navigation.navigate('Login')
+    })
+    .catch(function(error) {
+      // Handle Errors here.
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      
+      
+      if (errorCode === 'auth/weak-password') {
+        alert('Senha muito fraca!.');
+      }
+      else if (errorCode === 'auth/invalid-email') {
+        alert('Este email não é valido.'); 
+      }
+      /*else if (errorCode === 'auth/email-already-in-use'){
+        alert('Este email já está em uso.');
+      }*/
+      /*else if (errorCode === 'auth-user-not-found') {
+        alert('Email não cadastrado.');
+      }*/
+      console.log(error);
+      })
+   
+    
+>>>>>>> Stashed changes
   }
     return(
       <View style={styles.container}>
@@ -46,6 +128,62 @@ export default function Register(){
               </KeyboardAvoidingView>
           </ImageBackground>
         </View>
+<<<<<<< Updated upstream
+=======
+      )
+    }    
+    return (
+      <View style={styles.backngroundPrimary}>  
+       <ImageBackground source={BackgroundSub} style={styles.backgroundSub}>
+       <Image source={Logo} style={styles.logo}/>
+       
+        <Input
+          
+          placeholder="Nome"
+          colorBorder='#FFFFFF' 
+          placeholderTextColor='#FFFF'
+          backgroundColor='#751DCB'
+          width={250}
+          value={this.state.displayName}
+          onChangeText={(val) => this.updateInputVal(val, 'displayName')}
+        />      
+        <Input
+          placeholder="Email"
+          colorBorder='#FFFFFF' 
+          placeholderTextColor='#FFFF'
+          backgroundColor='#751DCB'
+          width={250}
+          value={this.state.email}
+          onChangeText={(val) => this.updateInputVal(val, 'email')}
+        />
+        <Input
+          
+          placeholder="Senha"
+          colorBorder='#FFFFFF' 
+          placeholderTextColor='#FFFF'
+          backgroundColor='#751DCB'
+          width={250}
+          value={this.state.password}
+          onChangeText={(val) => this.updateInputVal(val, 'password')}
+          maxLength={15}
+          secureTextEntry={true}
+        />   
+        <Botao tittle ='Registrar'
+          color="#31d57c"
+          width={134}
+          marginTop={24}
+          marginBottom={12}
+          title="Registrar"
+          onPress={() => this.registerUser()}
+        />
+
+        <Text 
+          style={styles.loginText}
+          onPress={() => this.props.navigation.navigate('Login')}>
+          Já tem conta? Clique aqui para entrar
+        </Text>  
+        </ImageBackground>                        
+>>>>>>> Stashed changes
       </View>
     );
 }

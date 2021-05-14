@@ -5,6 +5,12 @@ import  {SafeAreaView, View,
                       Image, Text, TouchableOpacity, 
                       KeyboardAvoidingView} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
+<<<<<<< Updated upstream
+=======
+
+import firebase from './database/firebase';
+>>>>>>> Stashed changes
+
 
 import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
@@ -23,11 +29,52 @@ export default function Login(){
 
   const navigation = useNavigation()
 
+<<<<<<< Updated upstream
   function handleNavigateToRegisterDetails(){
     navigation.navigate('Register')
   }
   function login(){
     navigation.navigate('Home')
+=======
+  userLogin = () => {
+    firebase.auth().signInWithEmailAndPassword(this.state.email, this.state.password)
+    .then((userCredential) => {
+      var user = userCredential.user;
+    })
+    .catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    if (errorCode === 'auth/wrong-password') {
+      alert('Email ou senha incorreta! tente novamente.');
+    } else if (errorCode === 'auth/invalid-email') {
+      alert('Email ou senha incorreta! tente novamente.'); 
+    }
+    if (errorCode === 'auth/user-not-found'){
+      alert('Usuario nao encontrado. Tente novamente');
+    }
+    /*else if (errorCode === 'auth-user-not-found') {
+      alert('Email não cadastrado.');
+    }*/
+    console.log(error);
+    })
+   
+    firebase
+    .auth()
+    .signInWithEmailAndPassword(this.state.email, this.state.password)
+    .then((res) => {
+      console.log(res)
+      console.log('User logged-in successfully!')
+      this.setState({
+        isLoading: false,
+        email: '', 
+        password: ''
+      })
+      this.props.navigation.navigate('Home')
+    })
+    .catch(error => this.setState({ errorMessage: error.message }))
+    
+>>>>>>> Stashed changes
   }
 
   return(

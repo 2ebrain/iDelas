@@ -50,7 +50,7 @@ export default function Home(){
         <View style={styles.content}>
           {/* Cabeçalho da View */}
           <HeaderMenu/>
-          <Header nickName='Renata Mendes' source={AvatarHome}/>
+          <Header nickName='displayName' source={AvatarHome}/>
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
