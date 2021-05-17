@@ -19,28 +19,32 @@ export default class Signup extends Component {
     state[prop] = val;
     this.setState(state);
   }
+  
 
   registerUser = () => {
+    var name;
     firebase
     .auth()
     .createUserWithEmailAndPassword(this.state.email, this.state.password)
     .then((user) => {
      // var user = res.user;
-     
       console.log('User registered successfully!')
       if (firebase.auth().currentUser) {
         userId = firebase.auth().currentUser.uid;
         if (userId) {
             firebase.database().ref('users/' + userId).set({
-              name:this.state.displayName,
+              displayName:this.state.displayName,
               email:this.state.email,
              // password:password,
              // uid:this.userId,
               status:true,
               online:true
             })
+            
         }
+        
       }
+
       this.setState({
         isLoading: false,
         displayName: '',

@@ -24,6 +24,7 @@ import IconCategoria from '../assets/icons/icon-categorias.png'
 import IconRelatorios from '../assets/icons/icon-relatorios.png'
 import IconSocios from '../assets/icons/icon-socios.png'
 import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
+import CartaoDrop from '../components/CartaoDrop.js'
 
 import AvatarHome from '../assets/icon-avatar-home.png'
 import AvatarProfile from '../assets/avatar-profile.png'
@@ -36,9 +37,13 @@ import Cobranca from '../assets/CobrancasPendentes.svg'
 import ConciliacaoContas from '../assets/Conciliacao-De-Contas.svg'
 import Saidas from '../assets/Saidas.svg'
 import Entrada from '../assets/Entradas.svg'
+import firebase from './database/firebase.js';
 
 export default function Home(){
+
   const navigation = useNavigation()
+
+
   
   return (
     <SafeAreaView style={styles.container}>
@@ -46,7 +51,7 @@ export default function Home(){
         <View style={styles.content}>
           {/* Cabeçalho da View */}
           <HeaderMenu/>
-          <Header nickName='Renata Mendes' source={AvatarHome}/>
+          <Header nickName={this.state.name} source={AvatarHome}/>
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
