@@ -9,12 +9,14 @@ import { StyleSheet,
 
 import { useNavigation } from '@react-navigation/core'
 
+
 //importes dos componentes da home
 import ButtonCard from '../components/ButtonCard'
 import ButtonRow from '../components/ButtonRow'
 import Header from '../components/Header'
 import HeaderMenu from '../components/HeaderMenuPrimary'
 
+import CartaoDrop from '../components/CartaoDrop'
 
 //importes dos icones usados na view
 import iconDollar from '../assets/icons/dollar-coin.png'
@@ -26,7 +28,8 @@ import IconSocios from '../assets/icons/icon-socios.png'
 import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
 import IconConciliacaoContas from '../assets/icons/icon-carteira.png'
 import IconSaidas from '../assets/icons/icon-saidas.png'
-import IconCobranca from '../assets/icons/icon-cobrancas.png'
+
+// import IconCobranca from '../assets/icons/icon-cobrancas.png'
 import IconEntradas from '../assets/icons/icon-entradas.png'
 import AvatarHome from '../assets/icon-avatar-home.png'
 import AvatarProfile from '../assets/avatar-profile.png'
@@ -36,15 +39,15 @@ import CardMap from '../assets/map-image.png'
 import GirlStudy from '../assets/university-girl.png'
 
 export default function Home(){
-  const navigation = useNavigation();
+  const navigation = useNavigation()
   
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>  
+      <ScrollView>
         <View style={styles.content}>
           {/* Cabeçalho da View */}
-          <HeaderMenu/>
-          <Header nickName='Renata Mendes' source={AvatarHome}/>
+          <HeaderMenu />
+          <Header nickName="Renata Mendes" source={AvatarHome} />
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
             <Text style={styles.tittleText}>Fluxo de Caixa</Text>
@@ -113,43 +116,20 @@ export default function Home(){
             </View>
           </View>
 
-          {/* <View style={styles.sectionBox}>
-            <Text style={styles.tittleText}>Resultado Financeiro</Text>
-
-            <View style={styles.contentBox}>
-              <View style={styles.headerBox}>
-                <View style={styles.accountSaldo}>
-                  <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                  <Text style={styles.textCash}>R$ 24.643,00</Text>
-                </View>
-                <View style={styles.iconsContainer}>
-                  <TouchableOpacity>
-                    <Image source={iconEye} style={{ width: 18, height: 13 }} />
-                  </TouchableOpacity>
-                  <TouchableOpacity
-                    onPress={() => navigation.navigate("Detalhes")}
-                  >
-                    <Image
-                      source={iconArrowBottom}
-                      style={{ width: 15, height: 13 }}
-                    />
-                  </TouchableOpacity>
-                </View>
-              </View>
-              
-
-            <View>
-                <Text>Conta Corrente</Text>
-            </View>
-            </View>
-          </View> */}
+        
+          <View style={styles.sectionBox}>
+            <CartaoDrop />
+          </View>
+          
 
 
           {/* Seção de Botões Card*/}
           <View style={styles.botoesContainer}>
             <ButtonCard
               tituloButon="Conciliação de Contas"
-              onPress={()=>{navigation.navigate('ConciliacaoDeContas')}}
+              onPress={() => {
+                navigation.navigate("ConciliacaoDeContas");
+              }}
               source={IconConciliacaoContas}
               borderTopRightRadius={15}
               borderBottomEndRadius={15}
@@ -159,27 +139,35 @@ export default function Home(){
             />
             <ButtonCard
               tituloButon="Saidas"
-              onPress={()=>{navigation.navigate('TestView')}}
+              onPress={() => {
+                navigation.navigate("TestView");
+              }}
               source={IconSaidas}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
               borderBottomLeftRadius={15}
               width={53}
               height={39}
-            />
+            ></ButtonCard>
+
             <ButtonCard
-              tituloButon="Cobranças Pendentes"
-              onPress={()=>{navigation.navigate('TestView')}}
-              source={IconCobranca}
+              tituloButon="Cob\ranças Pendentes"
+              onPress={() => {
+                navigation.navigate("TestView");
+              }}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
               borderTopRightRadius={15}
-              width={67}
-              height={40}
-            />
+            >
+              {/* <IconCobrancas width={50}/> */}
+              {/* <IconTTT width={50} height={50} /> */}
+            </ButtonCard>
+
             <ButtonCard
               tituloButon="Entradas"
-              onPress={()=>{navigation.navigate('Entradas')}}
+              onPress={() => {
+                navigation.navigate("Entradas");
+              }}
               source={IconEntradas}
               borderTopRightRadius={15}
               borderTopLeftRadius={15}
@@ -190,26 +178,42 @@ export default function Home(){
           </View>
 
           {/* Seção de botões estilos linha */}
-          <ButtonRow textButton='Precificação de Produtos & Serviços' 
-                     onPress={()=>{navigation.navigate('ProdutosServicos')}}
-                     source={IconBoxDollar}
-                     widthIcon={30}
-                     heightIcon={28}/>
-          <ButtonRow textButton='Relatórios'
-                     onPress={()=>{navigation.navigate('Relatorios')}} 
-                     source={IconRelatorios}
-                     widthIcon={21}
-                     heightIcon={31}/>
-          <ButtonRow textButton='Categorias'
-                     onPress={()=>{navigation.navigate('Categorias')}} 
-                     source={IconCategoria}
-                     widthIcon={27}
-                     heightIcon={27}/>
-          <ButtonRow textButton='Sócios & Funcionários'
-                     onPress={()=>{navigation.navigate('FuncionariosSocios')}} 
-                     source={IconSocios}
-                     widthIcon={27}
-                     heightIcon={27}/>
+          <ButtonRow
+            textButton="Precificação de Produtos & Serviços"
+            onPress={() => {
+              navigation.navigate("ProdutosServicos");
+            }}
+            source={IconBoxDollar}
+            widthIcon={30}
+            heightIcon={28}
+          />
+          <ButtonRow
+            textButton="Relatórios"
+            onPress={() => {
+              navigation.navigate("Relatorios");
+            }}
+            source={IconRelatorios}
+            widthIcon={21}
+            heightIcon={31}
+          />
+          <ButtonRow
+            textButton="Categorias"
+            onPress={() => {
+              navigation.navigate("Categorias");
+            }}
+            source={IconCategoria}
+            widthIcon={27}
+            heightIcon={27}
+          />
+          <ButtonRow
+            textButton="Sócios & Funcionários"
+            onPress={() => {
+              navigation.navigate("FuncionariosSocios");
+            }}
+            source={IconSocios}
+            widthIcon={27}
+            heightIcon={27}
+          />
 
           {/* Seção Mais Opções */}
           <View style={styles.profileContainer}>
@@ -225,7 +229,12 @@ export default function Home(){
               <Image source={CardMap} style={styles.cardImg} />
             </View>
 
-            <TouchableOpacity style={styles.cardGirl} onPress={() =>{navigation.navigate('MyNegoces')}}>
+            <TouchableOpacity
+              style={styles.cardGirl}
+              onPress={() => {
+                navigation.navigate("MyNegoces");
+              }}
+            >
               <Image source={GirlStudy} style={styles.cardImg} />
               <Text style={styles.textCard}>Universidade{"\n"}Da Quel</Text>
             </TouchableOpacity>
@@ -245,6 +254,7 @@ const styles = StyleSheet.create({
   },
   content:{
     alignItems:'center',
+    marginTop:15,
   },
   header:{
     width:'100%',
