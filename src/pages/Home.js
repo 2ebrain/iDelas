@@ -14,12 +14,10 @@ import ButtonCard from '../components/ButtonCard'
 import ButtonRow from '../components/ButtonRow'
 import Header from '../components/Header'
 import HeaderMenu from '../components/HeaderMenuPrimary'
+import CartaoDrop from '../components/CartaoDrop'
 
 
 //importes dos icones usados na view
-import iconDollar from '../assets/icons/dollar-coin.png'
-import iconEye from '../assets/icons/icon-eye-gray.png'
-import iconArrowBottom from '../assets/icons/icon-arrow-bottom.png'
 import IconCategoria from '../assets/icons/icon-categorias.png'
 import IconRelatorios from '../assets/icons/icon-relatorios.png'
 import IconSocios from '../assets/icons/icon-socios.png'
@@ -36,6 +34,11 @@ import Cobranca from '../assets/CobrancasPendentes.svg'
 import ConciliacaoContas from '../assets/Conciliacao-De-Contas.svg'
 import Saidas from '../assets/Saidas.svg'
 import Entrada from '../assets/Entradas.svg'
+import Relatorios from '../assets/Relatorios.svg'
+import PrecificaçãoDeProdutosServiços from '../assets/PrecificaçãoDeProdutosServiços.svg'
+import Categorias from '../assets/Categorias.svg'
+import SociosFuncionarios from '../assets/SociosEFuncionarios.svg'
+
 
 export default function Home(){
   const navigation = useNavigation()
@@ -49,75 +52,22 @@ export default function Home(){
           <Header nickName='Renata Mendes' source={AvatarHome}/>
           {/* Seção de Caixa */}
           <View style={styles.sectionBox}>
-            <Text style={styles.tittleText}>Fluxo de Caixa</Text>
-            <View style={styles.contentBox}>
-              <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text style={styles.textCash}>R$ 24.643,00</Text>
-              </View>
-              <View style={styles.iconsContainer}>
-                <TouchableOpacity>
-                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
-                </TouchableOpacity>
-                <TouchableOpacity>
-                  <Image
-                    source={iconArrowBottom}
-                    style={{ width: 15, height: 13 }}
-                  />
-                </TouchableOpacity>
-              </View>
+            <View style={styles.sectionBoxHeader}>
+              <Text style={styles.tittleText}>Fluxo de Caixa</Text>
             </View>
-          </View>
-
-          <View style={styles.sectionBox}>
-            <Text style={styles.tittleText}>Níveis de Caixa</Text>
-            <View style={styles.contentBox}>
-              <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text style={styles.textCash}>R$ 55.265,00</Text>
-              </View>
-              <View style={styles.iconsContainer}>
-                <TouchableOpacity>
-                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate("NiveisDeCaixa")}
-                >
-                  <Image
-                    source={iconArrowBottom}
-                    style={{ width: 15, height: 13 }}
-                  />
-                </TouchableOpacity>
-              </View>
-            </View>
-          </View>
-
-          <View style={styles.sectionBox}>
-            <Text style={styles.tittleText}>Resultado Financeiro</Text>
-            <View style={styles.contentBox}>
-              <View style={styles.accountSaldo}>
-                <Image source={iconDollar} style={{ width: 27, height: 21 }} />
-                <Text style={styles.textCash}>R$ 24.643,00</Text>
-              </View>
-              <View style={styles.iconsContainer}>
-                <TouchableOpacity>
-                  <Image source={iconEye} style={{ width: 18, height: 13 }} />
-                </TouchableOpacity>
-                <TouchableOpacity
-                  onPress={() => navigation.navigate("Detalhes")}
-                >
-                  <Image
-                    source={iconArrowBottom}
-                    style={{ width: 15, height: 13 }}
-                  />
-                </TouchableOpacity>
-              </View>
-            </View>
-          </View>
-
-        
-          <View style={styles.sectionBox}>
             <CartaoDrop />
+          </View>
+          <View style={styles.sectionBox}>
+            <View style={styles.sectionBoxHeader}>
+              <Text style={styles.tittleText}>Niveis de Caixa</Text>
+            </View>
+            <CartaoDrop onPressDetails={() => navigation.navigate("NiveisDeCaixa")}/>
+          </View>
+          <View style={styles.sectionBox}>
+            <View style={styles.sectionBoxHeader}>
+              <Text style={styles.tittleText}>Resultado Financeiro</Text>
+            </View>
+            <CartaoDrop onPressDetails={() => navigation.navigate("Detalhes")}/>
           </View>
           
           {/* Seção de botões estilo Cards*/}
@@ -180,24 +130,28 @@ export default function Home(){
           {/* Seção de botões estilos linha */}
           <ButtonRow textButton='Precificação de Produtos & Serviços' 
                      onPress={()=>{navigation.navigate('ProdutosServicos')}}
-                     source={IconBoxDollar}
                      widthIcon={30}
-                     heightIcon={28}/>
+                     heightIcon={28}>
+                       <PrecificaçãoDeProdutosServiços width={30} height={28}/>
+                     </ButtonRow>
           <ButtonRow textButton='Relatórios'
                      onPress={()=>{navigation.navigate('Relatorios')}} 
-                     source={IconRelatorios}
                      widthIcon={21}
-                     heightIcon={31}/>
+                     heightIcon={31}>
+                      <Relatorios width={21} height={31}/>
+                     </ButtonRow>
           <ButtonRow textButton='Categorias'
                      onPress={()=>{navigation.navigate('Categorias')}} 
-                     source={IconCategoria}
                      widthIcon={27}
-                     heightIcon={27}/>
+                     heightIcon={27}>
+                       <Categorias width={27} height={27}/>
+                     </ButtonRow>
           <ButtonRow textButton='Sócios & Funcionários'
                      onPress={()=>{navigation.navigate('FuncionariosSocios')}} 
-                     source={IconSocios}
                      widthIcon={27}
-                     heightIcon={27}/>
+                     heightIcon={27}>
+                       <SociosFuncionarios width={27} height={26}/>
+                     </ButtonRow>
 
           {/* Seção Mais Opções */}
           <View style={styles.profileContainer}>
@@ -353,7 +307,8 @@ const styles = StyleSheet.create({
   },
   //Section Caixas
   sectionBox:{
-    width:350,
+    justifyContent:'center',
+    // width:'100%',
     padding:10,
   },
   contentBox:{
@@ -390,6 +345,10 @@ const styles = StyleSheet.create({
     width:40,
     justifyContent:'space-between',
     marginRight:10,
+  },
+  sectionBoxHeader:{
+    width:'100%',
+    alignItems:'flex-start',
   },
   tittleText:{
     fontSize:14,

@@ -9,6 +9,8 @@ import firebase from './database/firebase';
 import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
+import FacebookIcon from '../assets/Facebook.svg'
+
 import FaceIcon from '../assets/icons/icon-facebook.png'
 import GoogleIcon from '../assets/icons/icon-google.png'  
 import LinkedinIcon from '../assets/icons/icon-linkedin.png'

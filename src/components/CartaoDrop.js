@@ -2,9 +2,11 @@ import React, {useState} from 'react'
 import {StyleSheet, TouchableOpacity, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
+import DollarCoins from '../assets/dollar-coin.svg'
+
 import { ListItem } from 'react-native-elements'
 
-export default () =>{
+export default (props) =>{
   const  [expanded, setExpanded] = useState(false)
 
   const list = [
@@ -26,7 +28,7 @@ export default () =>{
       <ListItem.Accordion
         content={
           <>
-            <Icon name='dollar-sign' size={20}  color='#31D57C'/>
+            <DollarCoins width={27} height={21}/>
 
             <ListItem.Content>
               <ListItem.Title style={styles.textTitle}>R$ 55.265,00</ListItem.Title>
@@ -70,7 +72,7 @@ export default () =>{
                 <ListItem.Title style={styles.titleSubitem}>{l.valores}</ListItem.Title>
               </ListItem.Content>
 
-                <TouchableOpacity style={styles.buttonDetais}>
+                <TouchableOpacity style={styles.buttonDetais} onPress={props.onPressDetails}>
                   <Text style={styles.buttonDetaisText}>Detalhes</Text>
                 </TouchableOpacity>
             </ListItem.Content>
@@ -85,6 +87,7 @@ export default () =>{
 
 const styles = StyleSheet.create({
   ListAccordion:{
+    width:321,
     backgroundColor:'#fff', 
     elevation:3, 
     borderRadius:10,
