@@ -26,17 +26,18 @@ import IconCategoria from '../assets/icons/icon-categorias.png'
 import IconRelatorios from '../assets/icons/icon-relatorios.png'
 import IconSocios from '../assets/icons/icon-socios.png'
 import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
-import IconConciliacaoContas from '../assets/icons/icon-carteira.png'
-import IconSaidas from '../assets/icons/icon-saidas.png'
 
-// import IconCobranca from '../assets/icons/icon-cobrancas.png'
-import IconEntradas from '../assets/icons/icon-entradas.png'
 import AvatarHome from '../assets/icon-avatar-home.png'
 import AvatarProfile from '../assets/avatar-profile.png'
 
 import Capa from '../assets/capa.png'
 import CardMap from '../assets/map-image.png'
 import GirlStudy from '../assets/university-girl.png'
+
+import Cobranca from '../assets/CobrancasPendentes.svg'
+import ConciliacaoContas from '../assets/Conciliacao-De-Contas.svg'
+import Saidas from '../assets/Saidas.svg'
+import Entrada from '../assets/Entradas.svg'
 
 export default function Home(){
   const navigation = useNavigation()
@@ -121,37 +122,38 @@ export default function Home(){
             <CartaoDrop />
           </View>
           
-
-
-          {/* Seção de Botões Card*/}
+          {/* Seção de botões estilo Cards*/}
           <View style={styles.botoesContainer}>
             <ButtonCard
               tituloButon="Conciliação de Contas"
               onPress={() => {
                 navigation.navigate("ConciliacaoDeContas");
               }}
-              source={IconConciliacaoContas}
               borderTopRightRadius={15}
               borderBottomEndRadius={15}
               borderBottomLeftRadius={15}
               width={41}
               height={46}
-            />
+            >
+              <ConciliacaoContas width={41} height={46}/>
+            </ButtonCard>
+
             <ButtonCard
               tituloButon="Saidas"
               onPress={() => {
                 navigation.navigate("TestView");
               }}
-              source={IconSaidas}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
               borderBottomLeftRadius={15}
               width={53}
               height={39}
-            ></ButtonCard>
+            >
+              <Saidas width={53} height={38}/>
+            </ButtonCard>
 
             <ButtonCard
-              tituloButon="Cob\ranças Pendentes"
+              tituloButon="Cobranças Pendentes"
               onPress={() => {
                 navigation.navigate("TestView");
               }}
@@ -159,8 +161,7 @@ export default function Home(){
               borderBottomEndRadius={15}
               borderTopRightRadius={15}
             >
-              {/* <IconCobrancas width={50}/> */}
-              {/* <IconTTT width={50} height={50} /> */}
+              <Cobranca width={67} height={40}/>
             </ButtonCard>
 
             <ButtonCard
@@ -168,13 +169,14 @@ export default function Home(){
               onPress={() => {
                 navigation.navigate("Entradas");
               }}
-              source={IconEntradas}
               borderTopRightRadius={15}
               borderTopLeftRadius={15}
               borderBottomLeftRadius={15}
               width={60}
               height={46}
-            />
+            >
+              <Entrada width={60} height={46}/>
+            </ButtonCard>
           </View>
 
           {/* Seção de botões estilos linha */}
@@ -254,7 +256,8 @@ const styles = StyleSheet.create({
   },
   content:{
     alignItems:'center',
-    marginTop:15,
+    marginTop:36,
+    
   },
   header:{
     width:'100%',

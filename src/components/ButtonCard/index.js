@@ -1,6 +1,5 @@
 import React from 'react'
-import {Image, 
-        Text, TouchableOpacity} from 'react-native'
+import {Text, TouchableOpacity} from 'react-native'
 
 import Style from './style'
 
@@ -15,12 +14,13 @@ export default (props) => {
                             {borderBottomLeftRadius:props.borderBottomLeftRadius},
                             {borderTopLeftRadius:props.borderTopLeftRadius}]}
                       onPress={props.onPress}>
-      {/* <Image source={props.source} style={[Style.iconButton,
-                                        {width:props.width},
-                                        {height:props.height}]} 
-      /> */}
-     
+     {/* props.children recebe todo o valor que
+         for adicionado no componente de maneira
+         <componente></componente>
+     */}
       {props.children}
+      
+      {/* Titulo do butão */}
       <Text style={Style.textBotao}>{props.tituloButon}</Text>
     </TouchableOpacity>
   )
