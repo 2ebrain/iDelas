@@ -22,7 +22,7 @@
        " js " ,
        " jsx " ,
         " json " ,
-        " wasm " ,
+        " wasm " , 
         " svg " 
      ] 
    },
