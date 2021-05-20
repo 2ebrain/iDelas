@@ -21,6 +21,8 @@ import MyNegoces from './pages/MeuNegocio'
 import FuncionariosSocios from './pages/FuncionariosSocios'
 import Entradas from './pages/Entradas'
 import Investimento from './pages/Investimentos'
+import Dividendos from './pages/Dividendos'
+import ObrigacoesTrabalhistas from './pages/ObrigacoesTrabalhistas'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -161,6 +163,24 @@ export default function Routes() {
          <Screen
            name="Investimento"
            component={Investimento}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+         <Screen
+           name="Dividendos"
+           component={Dividendos}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+         <Screen
+           name="ObrigacoesTrabalhistas"
+           component={ObrigacoesTrabalhistas}
            options={{
              gestureEnabled: true,
              gestureDirection: "horizontal",
