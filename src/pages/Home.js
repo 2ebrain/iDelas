@@ -16,13 +16,7 @@ import Header from '../components/Header'
 import HeaderMenu from '../components/HeaderMenuPrimary'
 import CartaoDrop from '../components/CartaoDrop'
 
-
 //importes dos icones usados na view
-import IconCategoria from '../assets/icons/icon-categorias.png'
-import IconRelatorios from '../assets/icons/icon-relatorios.png'
-import IconSocios from '../assets/icons/icon-socios.png'
-import IconBoxDollar from '../assets/icons/icon-box-dollar.png'
-
 import AvatarHome from '../assets/icon-avatar-home.png'
 import AvatarProfile from '../assets/avatar-profile.png'
 

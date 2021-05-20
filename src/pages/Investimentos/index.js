@@ -1,27 +1,38 @@
-import React from "react";
-import { useNavigation } from "@react-navigation/core";
+import React from "react"
+import { useNavigation } from "@react-navigation/core"
 
-import AvatarHome from "../../assets/icon-avatar-home.png";
+import AvatarHome from "../../assets/icon-avatar-home.png"
 
-import IconPlusCircle from "../../assets/icons/icon-plus-circle-white.png";
+
+import CirclePlus from '../../assets/plus-circle.svg'
 
 import {
   SafeAreaView,
   Text,
   View,
   TouchableOpacity,
-  Image,
   ScrollView,
 } from "react-native"
 import Styles from "./style"
 
 
-import IconPlusOrange from "../../assets/icons/icon-plus-circle-orange.png"
-
 import Header from "../../components/Header"
 import HeaderSecundary from '../../components/HeaderMenuSecundary'
 
 export default function () {
+  const orcamentos = [
+    {
+      tipoOrcamento: 'Aluguel espaço',
+      valores:'R$ / % da meta',
+      obrigacoesTrabalhistas: 'Obrigacoes Trabalhistas',
+      reservaFinanceira: 'Reserva Financeira',
+      Investimentos: 'Investimentos',
+      total: 'Total'
+    }
+  ]
+
+
+
   const navigation = useNavigation();
   return (
     <SafeAreaView>
@@ -32,26 +43,20 @@ export default function () {
           {/* Seção de saldo e escolhas das contas de banco */}
           <View style={Styles.content}>
             <View style={Styles.titulo}>
-              <Text style={Styles.textTitulo}>Produtos & Serviços </Text>
+              <Text style={Styles.textTitulo}>Orçamento para investimentos Futuros</Text>
             </View>
           </View>
           {/* Seção de Botoes flutuantes */}
-          <View style={Styles.sectionButtons}>
-            <View style={Styles.button}>
-              <TouchableOpacity>
-                <Image source={IconPlusCircle} style={Styles.iconCirclePlus} />
-              </TouchableOpacity>
-              <Text style={Styles.buttonText}>
-                Cadastrar{"\n"}Produto
-              </Text>
-            </View>
-            <View style={Styles.button}>
-              <TouchableOpacity>
-                <Image source={IconPlusCircle} style={Styles.iconCirclePlus} />
-              </TouchableOpacity>
-              <Text style={Styles.buttonText}>Cadastrar{"\n"}Serviços</Text>
-            </View>
-          </View>
+          <TouchableOpacity style={Styles.button}>
+            <TouchableOpacity>
+              <CirclePlus with={16} heigth={16}/>
+            </TouchableOpacity>
+            <Text style={Styles.buttonText}>
+              Cadastrar Produto
+            </Text>
+          </TouchableOpacity>
+            
+    
          
 
 

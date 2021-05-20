@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="52.141" height="16.241" viewBox="0 0 52.141 16.241">
+  <g id="button-back" transform="translate(-112.513 0)">
+    <text id="voltar" transform="translate(129.654 11.966)" fill="#777" font-size="12" font-family="Gotham-Medium, Gotham" font-weight="500" letter-spacing="-0.02em"><tspan x="0" y="0">voltar</tspan></text>
+    <path id="Caminho_7" data-name="Caminho 7" d="M113.625,8.12,120.96.785a.46.46,0,0,0-.65-.65L112.648,7.8a.458.458,0,0,0,0,.65l7.662,7.658a.462.462,0,0,0,.323.136.449.449,0,0,0,.323-.136.458.458,0,0,0,0-.65Z" transform="translate(0 0)" fill="#777"/>
+  </g>
+</svg>

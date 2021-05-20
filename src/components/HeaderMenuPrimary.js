@@ -1,13 +1,16 @@
 import React from 'react'
-import { View, Text, StyleSheet, TouchableOpacity, Image } from 'react-native'
+import { View, Text, StyleSheet, 
+          TouchableOpacity, Image } from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import ArrowBottom from '../assets/icons/icon-arrow-bottom-white.png'
-import IconToggle from '../assets/icons/icon-toggle.png'
-import buttonSing from '../assets/icons/icon-sino.png'
+import Toggle from '../assets/button-toggle.svg'
+import SignButton from '../assets/icon-sign.svg'
 
 export default () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation()
+
+  // componente de header primario, com botão de menu toggle.
   return(
     <View style={styles.header}>
       <TouchableOpacity
@@ -15,7 +18,7 @@ export default () => {
         //   navigation.goBack()
         // }}
       >
-        <Image source={IconToggle} style={{ width: 21, height: 13 }} />
+        <Toggle width={21} height={13}/>
       </TouchableOpacity>
 
       <View style={styles.headerContent}>
@@ -25,7 +28,7 @@ export default () => {
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Image source={buttonSing} style={{ width:17, height:19 }} />
+          <SignButton width={17} height={19}/>
         </TouchableOpacity>
       </View>
   </View>

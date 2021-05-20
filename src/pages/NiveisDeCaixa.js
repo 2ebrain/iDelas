@@ -33,70 +33,88 @@ export default function Home(){
             </View>
 
             <View style={styles.boxMeta}>
-              <View style={styles.metaContainerText}>
-                <Text style={styles.textMeta}>Metas</Text>
+              <View style={{justifyContent:'flex-start', width:'100%'}}>
+                <View style={styles.metaContainerText}>
+                  <Text style={styles.textMeta}>Metas</Text>
+                </View>
               </View>
 
               <View style={styles.containerMountant}>
-                {/* Caixa de colunas */}
-                <View style={styles.columContainer}>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
 
-                  <View style={styles.columnBox}>
-                    <View style={styles.boxItem}>
-                      <Text style={[styles.itemText, styles.colorWhite]}>
-                        R$ 103.202.00
+                <View style={styles.column}>
+                    <Text style={styles.inputColumn}>
+                      R$ 103.202,00
+                    </Text>
+                  <Text style={styles.inputColumn}>
+                    R$ 103.202,00
+                  </Text>
+                  <Text style={styles.inputColumn}>
+                    R$ 103.202,00
+                  </Text>
+
+                  <View style={{backgroundColor:'#691CC7', width:'100%', borderBottomEndRadius:10, borderBottomLeftRadius:10, alignItems:'center' }}>
+                    <Text style={{paddingTop:75, color:'#fff', fontSize:8}} >
+                        R$ 103.202,00
                       </Text>
-                    </View>
-                    <View style={styles.boxItem}>
-                      <Text style={[styles.itemText, styles.colorWhite]}>
-                        R$ 103.202.00
-                      </Text>
-                    </View>
-                    <View style={styles.boxItem}>
-                      <Text style={[styles.itemText, styles.colorWhite]}></Text>
-                    </View>
+                    <Text style={{paddingTop:75, color:'#fff', fontSize:8}} >
+                      R$ 103.202,00
+                    </Text>
+                    <Text style={{paddingTop:75, color:'#fff', fontSize:8}} >
+                    
+                    </Text>
                   </View>
                 </View>
-                {/* Segunda Caixa de colunas */}
-                <View style={styles.columContainerSecundary}>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
-                  <View style={styles.boxItem}>
-                    <Text style={styles.itemText}>R$ 103.202.00</Text>
-                  </View>
+                
+                <View style={styles.columnSecundary}>
+                  <Text style={styles.inputColumnSecundary}>
+                  </Text>
+                  <Text style={styles.inputColumnSecundary}>
+                   0% FALTA 100%
+                  </Text>
+                  <Text style={styles.inputColumnSecundary}>
+                    55% FALTA 45%
+                  </Text>
+                  <Text style={styles.inputColumnSecundary}>
+                    100%
+                  </Text>
+                  <Text style={styles.inputColumnSecundary}>
+                    100%
+                  </Text>
                 </View>
-                {/* Terceira Caixa de colunas */}
-                <View style={styles.columContainerTri}>
-                  <View style={styles.boxTableShiel}>
-                    <Text style={styles.inputText}>Dividendos</Text>
-                    <Text style={styles.inputText}>Investidores</Text>
-                  </View>
 
-                  <Text style={styles.inputText}>Reserva Financeira</Text>
-              
-                  <View style={styles.boxTableShiel}>
-                    <Text style={styles.inputText}>Obrigações Trabalhistas</Text>
-                    <Text style={styles.inputText}>Corrente</Text>
-                  </View>
+                <View style={styles.columnThird}>
+
+                  <TouchableOpacity style={{backgroundColor:'#691CC7', 
+                                borderRadius:5, alignItems:'center', width:'100%', 
+                                height:18, justifyContent:'center', marginBottom:20}}
+                                >
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Dividendos</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}
+                    onPress={() => navigate.navigate('Investimento')}>Invetsimentos</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Reserva Financeira</Text>
+                  </TouchableOpacity>
+
+                  <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Obrigações Trabalhistas</Text>
+                  </TouchableOpacity>
+                  
+                  <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Corrente</Text>
+                  </TouchableOpacity>
+                    
                 </View>
 
               </View>
 
 
             </View>
+
           </View>
         </View>
       </ScrollView>
@@ -119,112 +137,6 @@ const styles = StyleSheet.create({
     width:'100%',
     alignItems:'center',
   },
-  headerMenu:{
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between', 
-    width:65,
-  },
-  realidBox:{
-    width:100,
-    height:25,
-    padding:6,
-    backgroundColor:'#691CC7',
-    alignItems:'center',
-    justifyContent:'space-between',
-    flexDirection:'row',
-    borderRadius:10,
-  },
-  realidText:{
-    color:'#fff',
-    fontSize:14,
-  },
-  //Seção do Perfil
-  perfilContainer:{
-    flexDirection:'row',
-    width:'100%',
-    padding:15,
-    justifyContent:'space-evenly',
-    alignItems:'center',
-  },
-  avatarHome:{
-    width:100,
-    height:100,
-  },
-  infoContainer:{
-    width:230,
-    justifyContent:'flex-start',
-    alignItems:'flex-start',
-  },
-  nameAvatar:{
-    fontSize:15,
-    marginBottom:10,
-  },
-  /*Barra de progressao do perfil*/ 
-  progressContainer:{
-    width:'100%',
-    flexDirection:'row',
-    alignItems:'center',
-    justifyContent:'space-between',
-  },
-  barraBorder:{
-    width:150,
-    height:15,
-    borderWidth:2,
-    borderColor:'#7B1DCC',
-    borderRadius:7,
-    marginBottom:5,
-  },
-  barraProgress:{
-    width:'30%',
-    height:'100%',
-    backgroundColor:'#7B1DCC',
-  },
-  progressText:{
-    fontSize:13,
-    color:'#691CC7',
-  },
-  //Progrção Preta
-  barraBorderBlack:{
-    width:150,
-    height:15,
-    borderWidth:2,
-    borderColor:'#000',
-    borderRadius:7,
-    marginBottom:5,
-  },
-  barraProgressBlack:{
-    width:'15%',
-    height:'100%',
-    backgroundColor:'#000',
-  },
-  progressTextBlack:{
-    fontSize:13,
-    color:'#000',
-  },
-  //Progrção Verde
-  barraBorderGreen:{
-    width:150,
-    height:15,
-    borderWidth:2,
-    borderColor:'#40CC4B',
-    borderRadius:7,
-    marginBottom:5,
-  },
-  barraProgressGreen:{
-    width:'78%',
-    height:'100%',
-    backgroundColor:'#40CC4B',
-  },
-  progressTextGreen:{
-    textAlign:'center',
-    fontSize:12,
-    width:45,
-    backgroundColor:'#40CC4B',
-    borderRadius:10,
-    color:'#fff',
-  },
-
   //Moutant
   accountContainer:{
     flex:1,
@@ -236,7 +148,6 @@ const styles = StyleSheet.create({
     width:'100%',
     paddingHorizontal:24,
     marginBottom:20,
-    
   },
   tituloH1:{
     fontSize:15,
@@ -252,18 +163,17 @@ const styles = StyleSheet.create({
     alignItems:'center',
   },
   metaContainerText:{
-    width:'95%',
-    alignItems:'flex-start',
+    width:47,
+    alignItems:'center',
     justifyContent:'center',
-    height:20,
+    height:18,
     margin:15,
-    
     
   },
   textMeta:{
-    width:'13%',
     padding:5,
-    fontSize:10,
+    fontSize:9,
+    fontFamily:'gotham-medium',
     color:'#fff',
     borderRadius:5,
     backgroundColor:'#691CC7',
@@ -273,64 +183,40 @@ const styles = StyleSheet.create({
   //Seção de tabelas(Colunas) 
   containerMountant:{
     width:'100%',
+    // paddingHorizontal:10,
     justifyContent:'space-evenly',
     flexDirection:'row',
+    marginBottom:20,
   },
-  // Primeira Coluna
-  columContainer:{
-    borderWidth:2,
-    borderBottomEndRadius:20,
-    borderBottomLeftRadius:20,
-    borderColor:'#691CC7',
-    width:95,
-    height:'auto',
-    marginBottom:25,
-  },
-  columnBox:{
-    backgroundColor:'#691CC7',
-    borderBottomEndRadius:15,
-    borderBottomLeftRadius:15,
-  },
-  // Segunda Coluna
-  columContainerSecundary:{
+  column:{
     width:80,
-  },
-  columContainerTri:{
-    width:'100%',
-    height:350,
-    justifyContent:'space-between',
     alignItems:'center',
+    borderWidth:1,
+    borderColor:'#691CC7',
+    borderBottomEndRadius:10, 
+    borderBottomLeftRadius:10,
   },
-  boxTableShiel:{ 
-    height:90,
-    justifyContent:'space-between',
+  inputColumn:{
+    color:'#777777',
+    paddingTop:75,
+    fontSize:8,
+    fontFamily:'gotham-medium',
   },
-  boxTableShielPrimary:{
-    height:30,
+  columnSecundary:{
+    width: 75,
   },
-  inputText:{
-    width:210,
-    fontSize:11,
-    backgroundColor:'#691CC7',
-    color:'#fff',
-    padding:3,
-    textAlign:'center',
-    marginBottom:5,
-    borderRadius:10,
-
+  inputColumnSecundary:{
+    color:'#777777',
+    paddingTop:75,
+    fontSize:8,
+    fontFamily:'gotham-medium',
   },
-  colorWhite:{
-    color:'#fff',
-  },
-  boxItem:{
-    borderRadius:5,
-    height:85,
-    justifyContent:'flex-end',
+  columnThird:{
+    width:124,
+    height: 'auto',
     alignItems:'center',
+    justifyContent:'space-around',
   },
-  itemText:{
-    fontSize:11,
-    
-  },
+  
 
 });

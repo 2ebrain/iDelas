@@ -1,11 +1,10 @@
 import React from 'react'
-import {View, Image, TouchableOpacity, StyleSheet} from 'react-native'
+import {View, TouchableOpacity, StyleSheet} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
-import buttonSing from '../assets/icons/icon-sino.png'
-
-import ArrowLif from '../assets/icons/icon-back.png'
-import Interrogacao from '../assets/icons/icon-interrogacao.png'
+import ButtonBack from '../assets/button-back.svg'
+import QuestionIcon from '../assets/question-icon.svg'
+import ButtonSign from '../assets/icon-sign.svg'
 
 
 export default () =>{
@@ -17,16 +16,16 @@ export default () =>{
           navigation.goBack();
         }}
       >
-        <Image source={ArrowLif} style={{ width: 51, height: 16 }} />
+        <ButtonBack width={51} height={16}/>
       </TouchableOpacity>
 
       <View style={styles.headerContent}>
         <TouchableOpacity>
-          <Image source={Interrogacao} style={{ width: 12, height: 20 }} />
+          <QuestionIcon width={11} height={19}/>
         </TouchableOpacity>
 
         <TouchableOpacity>
-          <Image source={buttonSing} style={{ width: 17, height: 19 }} />
+          <ButtonSign width={17} height={19}/>
         </TouchableOpacity>
       </View>
     </View>
@@ -40,6 +39,7 @@ const styles = StyleSheet.create({
     alignItems:'center',
     justifyContent:'space-between',
     padding:25,
+    marginTop:37,
 
   },
   headerContent:{

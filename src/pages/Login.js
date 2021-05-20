@@ -9,11 +9,11 @@ import firebase from './database/firebase';
 import BrackgroundSub from '../assets/circuitos_.png'
 import Logo from  '../assets/Logo_iDelas.png'
 
-import FacebookIcon from '../assets/Facebook.svg'
+import FacebookIcon from '../assets/icon-facebook.svg'
+import GooIcon from '../assets/icon-google.svg'
+import LinkedinIcon from '../assets/icon-linkedin.svg'
 
-import FaceIcon from '../assets/icons/icon-facebook.png'
-import GoogleIcon from '../assets/icons/icon-google.png'  
-import LinkedinIcon from '../assets/icons/icon-linkedin.png'
+
 
 import Input from '../components/Input'
 import Link from '../components/Link'
@@ -85,7 +85,6 @@ export default class Login extends Component {
                                     behavior={Platform.OS == 'ios' ? 'padding' : 'height'}>
                 <Image source={Logo} style={styles.logo}/>
                 <View style={styles.inputBox}>
-                  
                     <Input
                           placeholder="Email"
                           colorBorder='#FFFFFF' 
@@ -122,14 +121,17 @@ export default class Login extends Component {
                       fontFamily='gotham-book'
                 />
                 <View style={styles.boxIcons}>
-                  <TouchableOpacity>
-                    <Image source={FaceIcon} style={styles.imgIcon}/>
+                  <TouchableOpacity style={{backgroundColor:'#fff', width:39, height:39, borderRadius:20, justifyContent:'center', alignItems:'center'}}>
+                    {/* <Image source={FaceIcon} style={styles.imgIcon}/> */}
+                    <FacebookIcon width={15} height={15}/>
                   </TouchableOpacity>
-                  <TouchableOpacity>
-                    <Image source={GoogleIcon} style={styles.imgIcon}/>
+                  <TouchableOpacity style={{backgroundColor:'#fff', width:39, height:39, borderRadius:20, justifyContent:'center', alignItems:'center'}}>
+                    <GooIcon width={26} height={26}/>
+                    {/* <Image source={GoogleIcon} style={styles.imgIcon}/> */}
                   </TouchableOpacity>
-                  <TouchableOpacity>
-                    <Image source={LinkedinIcon} style={styles.imgIcon}/>
+                  <TouchableOpacity style={{backgroundColor:'#fff', width:39, height:39, borderRadius:20, justifyContent:'center', alignItems:'center'}}>
+                    {/* <Image source={LinkedinIcon} style={styles.imgIcon}/> */}
+                    <LinkedinIcon  width={35} height={35}/>
                   </TouchableOpacity>
                 </View>
               </KeyboardAvoidingView>
@@ -184,8 +186,8 @@ const styles = StyleSheet.create({
     boxIcons:{
       flexDirection:'row',
       alignItems:'center',
-      justifyContent:'center',
-      width:141,
+      justifyContent:'space-evenly',
+      width:165,
     },
     imgIcon:{
       width:39,

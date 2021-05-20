@@ -23,85 +23,25 @@ export default StyleSheet.create({
   textTitulo:{
     fontSize:15,
     color:'#691CC7',
+    fontFamily:'gotham-medium'
   },
-  contentAccount:{
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center',
-    width:'90%',
-    height:100,
-    borderWidth:2,
-    borderColor:'#F4CDBB',
-    borderRadius:20,
-    padding:15,
-  },
-  boxAccount:{
-    width:180,
-  },
-  boxBank:{
-    flexDirection:'row',
-    justifyContent:'flex-start',
-    alignItems:'center',
-  },
-  iconArrow:{
-    width:10,
-    height:10,
-    marginLeft:20,
-  },
-  textAcc:{
-    fontSize:11,
-    color:'#7C7C7C',
-  },
-  textBank:{
-    fontSize:14,
-    color:'#7C7C7C',
-    marginBottom:5,
-  },
-  Mountante:{
-    padding:5,
-  },
-  textSaldo:{
-    fontSize:10,
-    color:'#7C7C7C',
-  },
-  textMoney:{
-    fontSize:13,
-    color:'#7C7C7C',
-  },
-  textTrans:{
-    width:'100%',
-    padding:3,
-    backgroundColor:'#F9A179',
-    borderRadius:5,
-    color:'#fff',
-    fontSize:13,
-    textAlign:'center',
-    elevation:3,
-    },
     // Botões flutuantes
-    sectionButtons:{
-      flexDirection:'row',
-      width:'100%',
-      justifyContent:'space-around',
-      marginTop:16,
-    },
     button:{
-      width:170,
+      width:'90%',
+      height: 39,
       backgroundColor:'#691CC7',
       flexDirection:'row',
       alignItems:'center',
-      justifyContent:'space-evenly',
       borderRadius:10,
-    },
-    iconCirclePlus:{
-      width:20,
-      height:20,
+      paddingLeft:14,
     },
     buttonText:{
       color:'#fff',
-      fontSize:10,
+      fontSize:12,
+      fontFamily:'gotham-medium',
       textAlign:'left',
-      paddingVertical:10
+      paddingVertical:10,
+      paddingLeft:17
     },
     
 })

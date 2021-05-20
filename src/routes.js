@@ -20,6 +20,7 @@ import Categorias from './pages/Categorias'
 import MyNegoces from './pages/MeuNegocio'
 import FuncionariosSocios from './pages/FuncionariosSocios'
 import Entradas from './pages/Entradas'
+import Investimento from './pages/Investimentos'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -151,6 +152,15 @@ export default function Routes() {
          <Screen
            name="Entradas"
            component={Entradas}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+         <Screen
+           name="Investimento"
+           component={Investimento}
            options={{
              gestureEnabled: true,
              gestureDirection: "horizontal",
