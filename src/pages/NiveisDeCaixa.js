@@ -88,7 +88,8 @@ export default function Home(){
                                 borderRadius:5, alignItems:'center', width:'100%', 
                                 height:18, justifyContent:'center', marginBottom:20}}
                                 >
-                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Dividendos</Text>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}
+                     onPress={() => navigate.navigate('Dividendos')}>Dividendos</Text>
                   </TouchableOpacity>
 
                   <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
@@ -101,7 +102,8 @@ export default function Home(){
                   </TouchableOpacity>
 
                   <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
-                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}>Obrigações Trabalhistas</Text>
+                    <Text style={{color:'#fff', fontSize:9, fontFamily:'gotham-bold'}}
+                    onPress={() => navigate.navigate('ObrigacoesTrabalhistas')}>Obrigações Trabalhistas</Text>
                   </TouchableOpacity>
                   
                   <TouchableOpacity style={{backgroundColor:'#691CC7', borderRadius:5, alignItems:'center', width:'100%', height:18, justifyContent:'center'}}>
