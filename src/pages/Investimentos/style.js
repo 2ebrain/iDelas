@@ -34,6 +34,7 @@ export default StyleSheet.create({
       alignItems:'center',
       borderRadius:10,
       paddingLeft:14,
+      marginBottom:26,
     },
     buttonText:{
       color:'#fff',
@@ -44,4 +45,44 @@ export default StyleSheet.create({
       paddingLeft:17
     },
     
+
+    // Seção de cards de orrçamento
+    cardOrcamentos:{
+      width: '90%',
+      backgroundColor:'#fff',
+      padding: 19,
+      marginBottom:23,
+      borderRadius:10,
+      elevation:3,
+    },
+    headerCard:{
+      flexDirection:'row',
+      width: '100%',
+      justifyContent:'space-between',
+      alignItems:'center'
+    },
+    textHeader:{
+      fontSize:8,
+      color: '#BDA8B3',
+      borderWidth:1,
+      borderRadius:10,
+      borderColor:'#BDA8B3',
+      padding: 3,
+      textAlign:'center',
+      fontFamily:'gotham-bold',
+      textTransform:'uppercase',
+      
+    },
+    tituloOrcamento:{
+      fontSize:10,
+      fontFamily:'gotham-bold',
+      color: '#691CC7',
+      marginBottom:9,
+      textTransform:'uppercase',
+      
+    },
+    textValueCard:{
+      fontSize:10,
+      color:'#6A6A6A',
+    },
 })
