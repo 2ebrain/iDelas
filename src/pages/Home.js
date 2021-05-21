@@ -83,7 +83,7 @@ export default function Home(){
             <ButtonCard
               tituloButon="Saidas"
               onPress={() => {
-                navigation.navigate("TestView");
+                navigation.navigate("Saida");
               }}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}
