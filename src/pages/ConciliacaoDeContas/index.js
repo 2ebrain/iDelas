@@ -16,12 +16,14 @@ import {
 import Styles from "./style"
 
 import ArrowIcon from "../../assets/icons/icon-arrow-bottom.png"
-import DownloadIcon from "../../assets/icons/icon-download.png"
-import ConfigIcon from "../../assets/icons/icon-toggle-config.png"
 import IconArrowTop from "../../assets/icons/icon-arrow-top.png"
-import checkIcon from "../../assets/icons/icon-check.png"
-import EditIcon from "../../assets/icons/icon-edit.png"
-import ThrasIcon from "../../assets/icons/icon-delet-thrash.png"
+
+import CirclePlus from '../../assets/plus-circle.svg'
+import IconDownload from '../../assets/icon-download.svg'
+import IconFilter from '../../assets/icon-filter.svg'
+import IconLixeira from '../../assets/icon-lixeira.svg'
+import IconEdit from '../../assets/icon-editar.svg'
+import IconChecked from '../../assets/icon-checked.svg'
 
 import Header from "../../components/Header"
 import HeaderSecundary from '../../components/HeaderMenuSecundary'
@@ -62,29 +64,29 @@ export default function () {
           </View>
           {/* Seção de Botoes flutuantes */}
           <View style={Styles.sectionButtons}>
-            <View style={Styles.button}>
+            <TouchableOpacity style={Styles.button}>
               <TouchableOpacity>
-                <Image source={IconPlusCircle} style={Styles.iconCirclePlus} />
+                <CirclePlus width={16} height={16}/>
               </TouchableOpacity>
               <Text style={Styles.buttonText}>
                 Lançamentos de {"\n"}Entrada
               </Text>
-            </View>
-            <View style={Styles.button}>
+            </TouchableOpacity>
+            <TouchableOpacity style={Styles.button}>
               <TouchableOpacity>
-                <Image source={IconPlusCircle} style={Styles.iconCirclePlus} />
+                <CirclePlus width={16} height={16}/>
               </TouchableOpacity>
               <Text style={Styles.buttonText}>Lançamentos de {"\n"}Saida</Text>
-            </View>
+            </TouchableOpacity>
           </View>
           {/* Seção de Botões config */}
           <View style={Styles.sectionConfig}>
             <View style={Styles.boxButons}>
-              <TouchableOpacity style={Styles.buttonIcon}>
-                <Image source={DownloadIcon} style={Styles.iconImg} />
+              <TouchableOpacity >
+                <IconDownload width={20} height={20}/>
               </TouchableOpacity>
-              <TouchableOpacity style={[Styles.buttonIcon, Styles.background]}>
-                <Image source={ConfigIcon} style={Styles.iconImg} />
+              <TouchableOpacity style={Styles.background}>
+                <IconFilter width={20} height={20}/>
               </TouchableOpacity>
             </View>
           </View>
@@ -113,13 +115,13 @@ export default function () {
               <Text style={Styles.textCash}>R$ 4.250,00</Text>
               <View style={Styles.boxIcons}>
                 <TouchableOpacity>
-                  <Image source={checkIcon} style={{ width: 19, height: 12 }} />
+                  <IconChecked width={16} height={11}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Image source={EditIcon} style={{ width: 19, height: 19 }} />
+                  <IconEdit width={14} height={14}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Image source={ThrasIcon} style={{ width: 14, height: 18 }} />
+                  <IconLixeira width={12} height={14}/>
                 </TouchableOpacity>
               </View>
             </View>
@@ -142,14 +144,14 @@ export default function () {
             <View style={Styles.footerCard}>
               <Text style={Styles.textCash}>R$ 4.250,00</Text>
               <View style={Styles.boxIcons}>
-                <TouchableOpacity>
-                  <Image source={checkIcon} style={{ width: 19, height: 12 }} />
+              <TouchableOpacity>
+                  <IconChecked width={16} height={11}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Image source={EditIcon} style={{ width: 19, height: 19 }} />
+                  <IconEdit width={14} height={14}/>
                 </TouchableOpacity>
                 <TouchableOpacity>
-                  <Image source={ThrasIcon} style={{ width: 14, height: 18 }} />
+                  <IconLixeira width={12} height={14}/>
                 </TouchableOpacity>
               </View>
             </View>
