@@ -114,10 +114,10 @@ export default StyleSheet.create({
       flexDirection:'row',
       width:'100%',
       justifyContent:'flex-end',
+      alignItems:'center',
       paddingHorizontal:18,
       marginTop:25,
     },
-    buttonIcon:{},
     iconImg:{
       width:25,
       height:25,
@@ -126,9 +126,15 @@ export default StyleSheet.create({
       width:95,
       flexDirection:'row',
       justifyContent:'space-around',
+      alignItems:'center',
     },
     background:{
       backgroundColor:'#fff',
+      width: 39,
+      height:25,
+      borderRadius:10,
+      justifyContent:'center',
+      alignItems:'center',
     },
     // Card de transações
     cardFinancer:{
