@@ -23,6 +23,7 @@ import Entradas from './pages/Entradas'
 import Investimento from './pages/Investimentos'
 import Dividendos from './pages/Dividendos'
 import ObrigacoesTrabalhistas from './pages/ObrigacoesTrabalhistas'
+import Saida from './pages/Saida'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -181,6 +182,15 @@ export default function Routes() {
          <Screen
            name="ObrigacoesTrabalhistas"
            component={ObrigacoesTrabalhistas}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+         <Screen
+           name="Saida"
+           component={Saida}
            options={{
              gestureEnabled: true,
              gestureDirection: "horizontal",
