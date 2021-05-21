@@ -22,6 +22,7 @@ import HeaderSecundary from '../../components/HeaderMenuSecundary'
 export default function () {
   const list = [
     {
+      id:1,
       nomeEntrada:'Luana Oliveira',
       valorEntrada:'R$ 5.256,00',
       tipoDeEntrada:'Espécie/Dinheiro',
@@ -30,6 +31,7 @@ export default function () {
       tipo:'Jogo'
     },
     {
+      id:2,
       nomeEntrada:'Vinicius Souza',
       valorEntrada:'R$ 5.256,00',
       tipoDeEntrada:'Cartão de Credito',
@@ -38,6 +40,7 @@ export default function () {
       tipo:'Quadrinho'
     },
     {
+      id:3,
       nomeEntrada:'Paula Goes',
       valorEntrada:'R$ 5.256,00',
       tipoDeEntrada:'Espécie/Dinheiro',
@@ -100,6 +103,43 @@ export default function () {
               <IconFilter width={20} height={20}/>
             </TouchableOpacity>
           </View>
+
+
+          {list.map(entrada => (
+            <View key={entrada.id} style={Styles.cardEntrada}>
+              <View style={Styles.entradasInfo}>
+                <View style={{width:36,height:36,borderRadius:20, backgroundColor:'#691CC7'}}>
+                </View>
+
+                <View style={Styles.infoCard}>
+                  <View style={Styles.headerCard}>
+                    <Text style={Styles.nomeEntrada}>{entrada.nomeEntrada}</Text>
+                    <Text style={Styles.typeOcorrencia}>{entrada.tipoOcorrencia}</Text>
+                  </View>
+
+                  <View>
+                    <Text style={Styles.textInfoEntrada}>{entrada.valorEntrada}</Text>
+                    <Text style={Styles.textInfoEntrada}>{entrada.tipoDeEntrada}</Text>
+                    <Text style={Styles.textInfoEntrada}>{entrada.categoria}</Text>
+                  </View>
+                </View>
+              </View>
+
+             
+              <View style={{width:'100%', justifyContent:'center', alignItems:'flex-start', marginBottom:15,}}>
+               <Text style={Styles.tipoEntradaText}>{entrada.tipo}</Text>
+              </View>
+
+              <View style={Styles.sectionButotns}>
+                <TouchableOpacity style={Styles.buttonRealizar}>
+                  <Text style={Styles.buttonTextRealziar}>Realizar Recebimento</Text>
+                </TouchableOpacity>
+                <TouchableOpacity style={Styles.buttonRealizar}>
+                  <Text style={Styles.buttonTextRealziar}>Realizar Cobrança</Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          ))}
 
           
         </View>
