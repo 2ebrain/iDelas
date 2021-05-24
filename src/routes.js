@@ -24,6 +24,7 @@ import Investimento from './pages/Investimentos'
 import Dividendos from './pages/Dividendos'
 import ObrigacoesTrabalhistas from './pages/ObrigacoesTrabalhistas'
 import Saida from './pages/Saida'
+import CobrancasPendentes from './pages/CobrancasPendentes'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -191,6 +192,15 @@ export default function Routes() {
          <Screen
            name="Saida"
            component={Saida}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+         <Screen
+           name="CobrancasPendentes"
+           component={CobrancasPendentes}
            options={{
              gestureEnabled: true,
              gestureDirection: "horizontal",
