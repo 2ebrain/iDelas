@@ -37,18 +37,19 @@ export default () => {
 
 const styles = StyleSheet.create({
   header:{
-    width:'100%',
+    width:'80%',
     flexDirection:'row',
     alignItems:'center',
     justifyContent:'space-between',
-    padding:25,
-
+    // paddingHorizontal:40,
+    marginTop:20,
+    marginBottom:10,
   },
   headerContent:{
     flexDirection:'row',
-    width:160,
+    width:132,
     alignItems:'center',
-    justifyContent:'space-evenly',
+    justifyContent:'space-between',
   },
   buttonDrop:{
     backgroundColor:'#691CC7',

@@ -102,16 +102,20 @@ export default function Saida(){
 
           {/* Seção de Botões Flutuantes de Adicionar */}
           <View style={Styles.sectionsButton}>
-            <ButtonAdd titleButton="Cadastrar Nova Saida">
-              <TouchableOpacity>
-                <CirclePlus width={16} heigth={16} />
-              </TouchableOpacity>
-            </ButtonAdd>
-            <ButtonAdd titleButton="Conciliação de Contas">
-              <TouchableOpacity>
-                <ConciliacaoIcon width={17} heigth={24} />
-              </TouchableOpacity>
-            </ButtonAdd>
+            <View style={{width:152}}>
+              <ButtonAdd titleButton="Cadastrar Nova Saida"  widthText={70}>
+                <TouchableOpacity>
+                  <CirclePlus width={16} heigth={16} />
+                </TouchableOpacity>
+              </ButtonAdd>
+            </View>
+            <View style={{width:152}}>
+              <ButtonAdd titleButton="Conciliação de Contas" widthText={120}>
+                <TouchableOpacity>
+                  <ConciliacaoIcon width={17} heigth={24} />
+                </TouchableOpacity>
+              </ButtonAdd>
+            </View>
           </View>
 
           <View style={Styles.sectionFilter}>

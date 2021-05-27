@@ -30,6 +30,10 @@ export default function () {
               <Text style={Styles.textTitulo}>Relatórios</Text>
             </View>
           </View>
+
+          <View>
+            
+          </View>
           
         </View>
       </ScrollView>

@@ -134,4 +134,93 @@ export default StyleSheet.create({
     fontSize:8,
     fontFamily:'gotham-medium'
   },
+
+
+  cardCobrancas:{
+    backgroundColor:'#fff',
+    width: '90%',
+    borderRadius:10,
+    marginTop:25,
+    marginBottom:20,
+    justifyContent:'center',
+    alignItems:'center',
+
+  },
+  headerCard:{
+    width: '100%',
+    height:56,
+    paddingHorizontal:16,
+    paddingVertical:12,
+    flexDirection:'row',
+
+    alignItems:'center',
+    justifyContent:'flex-start',
+    borderWidth:1,
+    borderRadius:10,
+    borderColor:'#D9D9D9',
+  },
+
+  userAvatar:{
+    width: 32, 
+    height: 32, 
+    backgroundColor: "#691CC7",
+    borderRadius:20,
+  },
+  textName:{
+    marginLeft:11,
+    fontFamily:'gotham-medium',
+    fontSize:11,
+    color:'#777777',
+  },
+  cardValores:{
+    marginTop:23,
+    marginBottom:23,
+    width: 285,
+    justifyContent:'center',
+     alignItems:'center'
+  },
+  textValores:{
+    fontFamily:'gotham-book',
+    fontSize:9,
+    color:'#6A6A6A',
+    textAlign:'justify',
+  },
+
+
+  sectionButtons:{
+    width: '90%',
+    flexDirection:'row',
+    alignItems:'center',
+    justifyContent:'space-around',
+    marginBottom:21,
+
+  },
+  buttonSocial:{
+    width: 85,
+    height: 78,
+    borderWidth:1,
+    borderColor:'#691CC7',
+    borderRadius:10,
+    alignItems:'center',
+    justifyContent:'center',
+    
+  },
+  textButtonSocial:{
+    fontFamily:'gotham-medium',
+    fontSize:8,
+    color:'#691CC7',
+    textAlign:'center',
+    marginTop:11
+  },
+
+  cardSecitionTwo:{
+    width: '100%',
+    borderTopWidth:1,
+    borderColor:'#D3D3D3',
+    justifyContent:'center',
+    alignItems:'center'
+  },
+
+
+
 })
