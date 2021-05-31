@@ -107,7 +107,7 @@ const styles = StyleSheet.create({
   },
   cardDividendo: {
     width: 321,
-    borderWidth: 2,
+    borderWidth: 1,
     borderColor: "#C9C9C9",
     borderRadius: 10,
     marginBottom: 15,

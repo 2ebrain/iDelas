@@ -3,6 +3,7 @@ import {StyleSheet, TouchableOpacity, Text} from 'react-native'
 import Icon from 'react-native-vector-icons/FontAwesome5'
 
 import DollarCoins from '../assets/dollar-coin.svg'
+import EyeIcon from '../assets/eye-icon.svg'
 
 import { ListItem } from 'react-native-elements'
 
@@ -35,7 +36,7 @@ export default (props) =>{
             </ListItem.Content>
 
             <TouchableOpacity>
-              <Icon name='eye' color='#777777'size={15} />
+              <EyeIcon width={20} height={13}/>
             </TouchableOpacity>
           </>
         }
@@ -88,6 +89,8 @@ export default (props) =>{
 const styles = StyleSheet.create({
   ListAccordion:{
     width:321,
+    justifyContent:'center',
+    alignItems:'center',
     backgroundColor:'#fff', 
     elevation:3, 
     borderRadius:10,
