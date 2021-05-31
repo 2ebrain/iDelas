@@ -24,59 +24,36 @@ export default StyleSheet.create({
     fontSize:15,
     color:'#691CC7',
   },
-  contentAccount:{
-    flexDirection:'row',
-    justifyContent:'space-between',
-    alignItems:'center',
-    width:'90%',
-    height:100,
-    borderWidth:2,
-    borderColor:'#F4CDBB',
-    borderRadius:20,
-    padding:15,
+  
+  sectionButtons:{
+    flexDirection:'row', 
+    width:'90%', 
+    justifyContent:'space-between', 
+    alignItems:'center'
   },
-  boxAccount:{
-    width:180,
+  buttonsFilter:{
+    justifyContent:'space-between'
   },
-  boxBank:{
-    flexDirection:'row',
-    justifyContent:'flex-start',
-    alignItems:'center',
+  buttonFilter:{
+    width:107, 
+    height:18, 
+    backgroundColor:'#fff', 
+    paddingHorizontal:8, 
+    flexDirection:'row', 
+    justifyContent:'space-between', 
+    alignItems:'center', 
+    borderRadius:5, 
+    marginBottom:7
   },
-  iconArrow:{
-    width:10,
-    height:10,
-    marginLeft:20,
+  textButonFilter:{
+    fontSize:10, 
+    fontFamily:'gotham-medium', 
+    color:'#691CC7'
   },
-  textAcc:{
-    fontSize:11,
-    color:'#7C7C7C',
+
+  containerPlans:{
+    width: '90%',
+    marginTop:21,
   },
-  textBank:{
-    fontSize:14,
-    color:'#7C7C7C',
-    marginBottom:5,
-  },
-  Mountante:{
-    padding:5,
-  },
-  textSaldo:{
-    fontSize:10,
-    color:'#7C7C7C',
-  },
-  textMoney:{
-    fontSize:13,
-    color:'#7C7C7C',
-  },
-  textTrans:{
-    width:'100%',
-    padding:3,
-    backgroundColor:'#F9A179',
-    borderRadius:5,
-    color:'#fff',
-    fontSize:13,
-    textAlign:'center',
-    elevation:3,
-    },
-    
+  
 })
