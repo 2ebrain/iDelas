@@ -97,7 +97,7 @@ export default function Home(){
             <ButtonCard
               tituloButon="Cobranças Pendentes"
               onPress={() => {
-                navigation.navigate("CobrancasPendentes");
+                navigation.navigate("CadastroTerceiro");
               }}
               borderTopLeftRadius={15}
               borderBottomEndRadius={15}

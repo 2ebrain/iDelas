@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {StyleSheet, TouchableOpacity, Text} from 'react-native'
-import Icon from 'react-native-vector-icons/FontAwesome5'
+
 
 import DollarCoins from '../assets/dollar-coin.svg'
 import EyeIcon from '../assets/eye-icon.svg'

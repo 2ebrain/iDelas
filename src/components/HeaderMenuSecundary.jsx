@@ -1,11 +1,11 @@
 import React from 'react'
-import {View, TouchableOpacity, StyleSheet} from 'react-native'
+import {View, TouchableOpacity, StyleSheet, Text} from 'react-native'
 import { useNavigation } from '@react-navigation/core'
 
 import ButtonBack from '../assets/button-back.svg'
 import QuestionIcon from '../assets/question-icon.svg'
 import ButtonSign from '../assets/icon-sign.svg'
-
+import ArrowLeft from '../assets/arrow-left-grey.svg'
 
 export default () =>{
   const navigation = useNavigation();
@@ -15,8 +15,11 @@ export default () =>{
         onPress={() => {
           navigation.goBack();
         }}
+        style={styles.buttonBack}
       >
-        <ButtonBack width={51} height={16}/>
+        {/* <ButtonBack width={51} height={16}/> */}
+        <ArrowLeft width={8} height={16}/>
+        <Text style={styles.textButtonBack}>Voltar</Text>
       </TouchableOpacity>
 
       <View style={styles.headerContent}>
@@ -41,6 +44,18 @@ const styles = StyleSheet.create({
     padding:25,
     marginTop:37,
 
+  },
+  buttonBack:{
+    flexDirection:'row',
+    justifyContent:'space-between',
+    alignItems:'center',
+    width: 55,
+    height: 16,
+  },
+  textButtonBack:{
+    fontFamily:'gotham-medium',
+    fontSize:12,
+    color:'#777777',
   },
   headerContent:{
     flexDirection:'row',

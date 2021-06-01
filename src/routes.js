@@ -25,6 +25,8 @@ import Dividendos from './pages/Dividendos'
 import ObrigacoesTrabalhistas from './pages/ObrigacoesTrabalhistas'
 import Saida from './pages/Saida'
 import CobrancasPendentes from './pages/CobrancasPendentes'
+import Terceiros from './pages/Terceiros'
+import CadastroTerceiro from './pages/CadastroTerceiro'
 
 const { Navigator, Screen} = createStackNavigator();
 
@@ -201,6 +203,17 @@ export default function Routes() {
          <Screen
            name="CobrancasPendentes"
            component={CobrancasPendentes}
+           options={{
+             gestureEnabled: true,
+             gestureDirection: "horizontal",
+             cardStyleInterpolator: CardStyleInterpolators.forHorizontalIOS,
+           }}
+         />
+
+
+         <Screen
+           name="CadastroTerceiro"
+           component={CadastroTerceiro}
            options={{
              gestureEnabled: true,
              gestureDirection: "horizontal",

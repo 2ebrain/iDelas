@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
   flexDirection:'row',
   backgroundColor:'#691CC7',
   borderRadius:10,
+  elevation:4,
  },
  textButton:{
    marginLeft:9,
