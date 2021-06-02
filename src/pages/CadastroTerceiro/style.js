@@ -69,6 +69,18 @@ export default StyleSheet.create({
     height: 31,
     borderRadius:10
   },
+  inputFormMedio:{
+    backgroundColor:'#fff',
+    width: '100%',
+    height: 31,
+    borderRadius:10
+  },
+  inputFormPequeno:{
+    backgroundColor:'#fff',
+    width: '100%',
+    height: 31,
+    borderRadius:10
+  },
 
 
 })
